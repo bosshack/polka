@@ -9,5 +9,10 @@ for dotfile in $(find $DIR -type f -maxdepth 1 -name ".*"); do
     ln -fs $dotfile "${HOME}/$(basename $dotfile)"
 done
 
-# create ~/.bashrc.d if it does not exist
+# Create ~/.bashrc.d if it does not exist
 [ -d "${HOME}/.bashrc.d" ] || mkdir "${HOME}/.bashrc.d"
+
+# Link rc files in .bashrc.d
+for dotfile in $DIR/.bashrc.d/*; do
+    ln -fs $dotfile "${HOME}/.bashrc.d/$(basename $dotfile)"
+done
