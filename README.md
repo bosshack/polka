@@ -13,5 +13,9 @@ Development configuration for Luckie & Co.
 ```sh
 brew install bash
 sudo bash -c "echo /usr/local/bin/bash >> /private/etc/shells"
+```
+
+The next step is crucial but cannot be completed on network accounts
+```
 chsh -s /usr/local/bin/bash
 ```
