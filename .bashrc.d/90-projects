@@ -21,3 +21,4 @@ _pcd() {
 
   return 0
 }
+complete -F _pcd pcd
