@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Usage
+# ./back.sh ssh_server_name engine_yard_application_name
+db_name=$( ssh $1 "awk '/database/ { print \$2 }' /data/$2/shared/config/database.yml" )
+db_host=$( ssh $1 "awk '/host/ { print \$2 }' /data/$2/shared/config/database.yml" )
+db_user=$( ssh $1 "awk '/username/ { print \$2 }' /data/$2/shared/config/database.yml" )
+db_pass=$( ssh $1 "awk '/password/ { print \$2 }' /data/$2/shared/config/database.yml" )
+
+ssh $1 "mysqldump -u $db_user -p$db_pass -h $db_host $db_name > "'"${HOME}/backup.sql"'
+ssh $1 'gzip "${HOME}/backup.sql"'
+scp $1:\${HOME}/backup.sql.gz ${HOME}/backup.sql.gz
+ssh $1 'rm "${HOME}/backup.sql.gz"'
