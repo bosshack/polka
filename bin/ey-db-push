@@ -14,20 +14,15 @@
 
 server="$1"
 local_file="$3"
+app_name="$2"
 remote_file="\${HOME}/backup.sql"
-db_config="/data/${2}/shared/config/database.yml"
 
 scp "$local_file" "${server}:${remote_file}.gz"
 
 ssh -T "$server" <<EOF
 /bin/bash -s
-db_name=\$( awk '/database/ { print \$2 }' "$db_config" )
-db_host=\$( awk '/host/     { print \$2 }' "$db_config" )
-db_user=\$( awk '/username/ { print \$2 }' "$db_config" )
-db_pass=\$( awk '/password/ { print \$2 }' "$db_config" )
-
 gunzip "${remote_file}.gz"
-mysql -u \$db_user -p\$db_pass -h \$db_host \$db_name < "$remote_file"
+mysql "$app_name" < "$remote_file"
 rm "$remote_file"
 exit 0
 EOF
