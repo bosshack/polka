@@ -1,21 +1,23 @@
 #!/bin/bash
 
-# ey-db-pull
+# ey-db-push
 # =========
 #
 # Description
 # -------------
-# This script will pull down a gzipped mysql script from an engine yard database
+# This script will push up a gzip mysql script and apply it to an engine yard database
 #
 # Usage
 # ----------------
-# ey-db-pull <ssh_server_name> <engine_yard_application_name> [file_name (default: backup.sql.gz)]
+# ey-db-push <ssh_server_name> <engine_yard_application_name> <file_name>
 #
 
 server="$1"
-local_file=$([ -n "$3" ] && echo "$3" || echo "backup.sql.gz")
+local_file="$3"
 remote_file="\${HOME}/backup.sql"
 db_config="/data/${2}/shared/config/database.yml"
+
+scp "$local_file" "${server}:${remote_file}.gz"
 
 ssh -T "$server" <<EOF
 /bin/bash -s
@@ -24,12 +26,10 @@ db_host=\$( awk '/host/     { print \$2 }' "$db_config" )
 db_user=\$( awk '/username/ { print \$2 }' "$db_config" )
 db_pass=\$( awk '/password/ { print \$2 }' "$db_config" )
 
-mysqldump -u \$db_user -p\$db_pass -h \$db_host \$db_name > "$remote_file"
-gzip "$remote_file"
+gunzip "${remote_file}.gz"
+mysql -u \$db_user -p\$db_pass -h \$db_host \$db_name < "$remote_file"
+rm "$remote_file"
 exit 0
 EOF
-
-scp "${server}:${remote_file}.gz" "$local_file"
-ssh "$server" "rm \"${remote_file}.gz\""
 
 # vim:set ft=sh sts=2 sw=2 ts=2 expandtab noai:
