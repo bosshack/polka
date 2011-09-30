@@ -13,18 +13,13 @@
 #
 
 server="$1"
+app_name="$2"
 local_file=$([ -n "$3" ] && echo "$3" || echo "backup.sql.gz")
 remote_file="\${HOME}/backup.sql"
-db_config="/data/${2}/shared/config/database.yml"
 
 ssh -T "$server" <<EOF
 /bin/bash -s
-db_name=\$( awk '/database/ { print \$2 }' "$db_config" )
-db_host=\$( awk '/host/     { print \$2 }' "$db_config" )
-db_user=\$( awk '/username/ { print \$2 }' "$db_config" )
-db_pass=\$( awk '/password/ { print \$2 }' "$db_config" )
-
-mysqldump -u \$db_user -p\$db_pass -h \$db_host \$db_name > "$remote_file"
+mysqldump "$app_name" > "$remote_file"
 gzip "$remote_file"
 exit 0
 EOF
