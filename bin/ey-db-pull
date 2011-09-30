@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# ey-db-pull
+# =========
+#
+# Description
+# -------------
+# This script will pull down a gzipped mysql script from an engine yard database
+#
+# Usage
+# ----------------
+# ey-db-pull <ssh_server_name> <engine_yard_application_name>
+#
+
+ssh $1 <<EOF
+db_name=\$( awk '/database/ { print \$2 }' "/data/${2}/shared/config/database.yml" )
+db_host=\$( awk '/host/     { print \$2 }' "/data/${2}/shared/config/database.yml" )
+db_user=\$( awk '/username/ { print \$2 }' "/data/${2}/shared/config/database.yml" )
+db_pass=\$( awk '/password/ { print \$2 }' "/data/${2}/shared/config/database.yml" )
+
+mysqldump -u \$db_user -p\$db_pass -h \$db_host \$db_name > "\${HOME}/backup.sql"
+gzip "\${HOME}/backup.sql"
+EOF
+
+scp $1:\${HOME}/backup.sql.gz backup.sql.gz
+ssh $1 'rm "${HOME}/backup.sql.gz"'
+
+#vim:set ft=sh sw=2 ts=2 expandtab:
