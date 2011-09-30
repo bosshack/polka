@@ -9,20 +9,27 @@
 #
 # Usage
 # ----------------
-# ey-db-push <ssh_server_name> <engine_yard_application_name> <file_name>
+# ey-db-push <ssh_server_name> <file_name>
 #
 
 server="$1"
-local_file="$3"
-app_name="$2"
+local_file="$2"
 remote_file="\${HOME}/backup.sql"
 
 scp "$local_file" "${server}:${remote_file}.gz"
 
 ssh -T "$server" <<EOF
 /bin/bash -s
+app_name="\$( sudo ruby <<EOP
+  require 'rubygems'
+  require 'json'
+  conf = JSON.parse(File.read('/etc/chef/dna.json'))
+  print conf['applications'].first.first.strip
+  exit 0
+EOP )"
+db_name=\$( awk '/database/ { print \$2 }' "/data/\${app_name}/shared/config/database.yml" )
 gunzip "${remote_file}.gz"
-mysql "$app_name" < "$remote_file"
+mysql "\$db_name" < "$remote_file"
 rm "$remote_file"
 exit 0
 EOF
