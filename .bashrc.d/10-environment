@@ -1,6 +1,6 @@
 # vim:set ft=sh sw=2 ts=2 expandtab:
 VISUAL=vim
-EDITOR=$VISUAL
+EDITOR="$VISUAL"
 CLICOLOR=1
 HISTSIZE=10000
 HISTCONTROL=erasedups
