@@ -5,14 +5,15 @@
 #
 # Description
 # -------------
-# This script will gzip and transfer a folder on one engine yard server to
-# another. Then unzip it in the proper place. Then it willl clean up the
-# remainding files. The folder_name field is not required and defaults to
-# "system".
+# This script will transfer a shared folder from one engine yard server to
+# another engine yard server. The folder_name field is not required and
+# defaults to "system".
 #
 # Caveats
 # ---------
 # destination_server must be specefied as user@server_name
+# ForwardAgent must be set to yes in your local ssh_config file
+# AllowAgentForwarding must be set to yes in the first servers sshd_config
 #
 # Usage
 # -------
