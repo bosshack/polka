@@ -1,16 +1,22 @@
 #!/bin/bash
 
-# ey-folder-push
+# ey-folder-transfer
 # =========
 #
 # Description
 # -------------
-# This script will push up a gzipped folder to the shared folder on engine
-# yard and unzip it.
+# This script will gzip and transfer a folder on one engine yard server to
+# another. Then unzip it in the proper place. Then it willl clean up the
+# remainding files. The folder_name field is not required and defaults to
+# "system".
+#
+# Caveats
+# ---------
+# destination_server must be specefied as user@server_name
 #
 # Usage
-# ----------------
-# ey-file-push <ssh_server_name> <folder_name>
+# -------
+# ey-folder-transfer <target_server> <destination_server  [folder_name (default: system)]
 #
 
 target_server="$1"
