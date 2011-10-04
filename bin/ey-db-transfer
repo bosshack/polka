@@ -5,7 +5,7 @@
 #
 # Description
 # -------------
-# This script will transfer the contents and structure of a database on an an
+# This script will transfer the contents and structure of a database on an
 # engine yard server to another engine yard server.
 #
 # Caveats
