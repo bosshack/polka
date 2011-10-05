@@ -1,8 +1,11 @@
 # vim:set ft=sh sw=2 ts=2 expandtab:
-VISUAL=vim
-EDITOR="$VISUAL"
+
+EDITOR="vim"
 CLICOLOR=1
 HISTSIZE=10000
 HISTCONTROL=erasedups
 
-export VISUAL EDITOR CLICOLOR HISTSIZE HISTCONTROL
+prepend_path "${HOME}/bin" "$(brew --prefix)/bin"
+append_path "$(brew --cellar)/python"
+
+export EDITOR CLICOLOR HISTSIZE HISTCONTROL
