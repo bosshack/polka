@@ -7,3 +7,8 @@ alias glod='git log --oneline --decorate'
 alias gp='git push'
 alias gpr='git pull --rebase'
 alias gst='git status'
+
+# Rails aliases
+alias sc='script_rails console'
+alias ss='script_rails server -u'
+alias sdbc='script_rails dbconsole -p'
