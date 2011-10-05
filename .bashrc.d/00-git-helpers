@@ -1,37 +1,5 @@
 # vim: set ft=sh sw=2 ts=2 expandtab:
 
-remove_from_path() {
-  case "$PATH" in
-    *:"$1":*) PATH="$(echo "$PATH"|sed -e "s#:${1}##g")"
-  esac
-  export PATH
-}
-
-prepend_path() {
-  local args arg dir
-
-  # reverse the order of the arguments to preserve the order passed in
-  for arg in $@; do
-    args="$arg $args"
-  done
-
-  for dir in $args; do
-    remove_from_path "$dir"
-    PATH="${dir}:${PATH}"
-  done
-  export PATH
-}
-
-append_path() {
-  local dir
-
-  for dir in $@; do
-    remove_from_path "$dir"
-    PATH="${PATH}:${dir}"
-  done
-  export PATH
-}
-
 # git_prompt_info accepts 0 or 1 arguments (i.e., format string)
 # returns text to add to bash PS1 prompt (includes branch name)
 git_prompt_info () {
@@ -85,30 +53,3 @@ git_prompt_info () {
   fi
 }
 
-# Rails helpers
-rails_root() {
-  (
-  dir=${1:-$(pwd)}
-  i=0
-  while [ "/" != "$dir" -a "$i" -ne 16 ]; do
-    if [ -f "$dir/config/environment.rb" ]; then
-      echo "$dir"
-      return 0
-    fi
-    dir="$(dirname "$dir")"
-    i=$(expr $i + 1)
-  done
-  return 1
-  )
-}
-
-script_rails() {
-  if [ -f "`rails_root`/script/rails" ]; then
-    "`rails_root`/script/rails" "$@"
-  else
-    local name
-    name="$1"
-    shift
-    "`rails_root`/script/$name" "$@"
-  fi
-}
