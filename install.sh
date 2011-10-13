@@ -21,3 +21,7 @@ for program in $DIR/bin/*; do
     [ -x $program ] || continue
     ln -fs $program "${HOME}/bin/$(basename $program)"
 done
+
+[ -d "${HOME}/.vim/bundles" ] || mkdir -p "${HOME}/.vim/bundles"
+
+exec "${DIR}/bin/vim-bundle"
