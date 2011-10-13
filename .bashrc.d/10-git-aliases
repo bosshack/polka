@@ -1,4 +1,5 @@
-# Git aliases
+# vim: set ft=sh sw=2 ts=2 expandtab:
+
 alias gc='git commit -v'
 alias gca='git commit -a -v'
 alias gd='git diff'
@@ -7,8 +8,3 @@ alias glod='git log --oneline --decorate'
 alias gp='git push'
 alias gpr='git pull --rebase'
 alias gst='git status'
-
-# Rails aliases
-alias sc='script_rails console'
-alias ss='script_rails server -u'
-alias sdbc='script_rails dbconsole -p'
