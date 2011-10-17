@@ -3,9 +3,8 @@
 # Get the current directory
 DIR="$( cd "$(dirname "$0" )" && pwd )"
 
-# Link executable dot files to $HOME
+# Link dot files to $HOME
 for dotfile in $(find $DIR -type f -maxdepth 1 -name ".*"); do
-    [ -x $dotfile ] || continue
     ln -fs $dotfile "${HOME}/$(basename $dotfile)"
 done
 
