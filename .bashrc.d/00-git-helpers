@@ -41,14 +41,14 @@ git_prompt_info () {
     fi
     d=''
     s=$(git status --porcelain 2> /dev/null)
-    [[ $s =~ "$newfile" ]] && d+="\033[0;32m+\033[00m"
-    [[ $s =~ "M " ]] && d+="\033[0;33m*\033[00m"
-    [[ $s =~ "D " ]] && d+="\033[0;31m-\033[00m"
+    [[ $s =~ "$newfile" ]] && d+="+"
+    [[ $s =~ "M " ]] && d+="*"
+    [[ $s =~ "D " ]] && d+="-"
 
     if [ -n "${1-}" ]; then
-      printf "$1" "${b##refs/heads/}$r$d"
+      printf "$1" "${b##refs/heads/}${r}${d}"
     else
-      printf "(%b) " "${b##refs/heads/}$r$d"
+      printf "(%s) " "${b##refs/heads/}${r}${d}"
     fi
   fi
 }
