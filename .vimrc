@@ -60,6 +60,13 @@ set hidden
 set history=1000
 set undolevels=1000
 
+" Backup Directories
+set backupdir=~/.vim/backups,.
+set directory=~/.vim/swaps,.
+if exists('&undodir')
+  set undodir=~/.vim/undo,.
+endif
+
 " Fix backspace
 set backspace=indent,eol,start
 

@@ -22,5 +22,8 @@ for program in $DIR/bin/*; do
 done
 
 [ -d "${HOME}/.vim/bundles" ] || mkdir -p "${HOME}/.vim/bundles"
+[ -d "${HOME}/.vim/backups" ] || mkdir -p "${HOME}/.vim/backups"
+[ -d "${HOME}/.vim/swaps" ]   || mkdir -p "${HOME}/.vim/swaps"
+[ -d "${HOME}/.vim/undo" ]    || mkdir -p "${HOME}/.vim/undo"
 
 exec "${DIR}/bin/vim-bundle"
