@@ -84,6 +84,12 @@ endif
 let mapleader=','
 let maplocalleader=','
 
+" No arrow keys
+map <Left>  :echo "lolwut?"<cr>
+map <Right> :echo "lolwut?"<cr>
+map <Up>    :echo "lolwut?"<cr>
+map <Down>  :echo "lolwut?"<cr>
+
 " Jump key
 nnoremap ` '
 nnoremap ' `
@@ -108,7 +114,6 @@ nnoremap <localleader>ts m`:%s/\s\+$//e<CR>``
 if filereadable(expand('~/.vimrc.local'))
   source ~/.vimrc.local
 endif
-
 
 "=============================================
 " Rails.vim extensions
