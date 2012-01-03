@@ -1,0 +1,2 @@
+# right status and color
+set -g status-right '#[fg=red]ಠ_ಠ #[fg=yellow]%A %v %l:%M %p'
