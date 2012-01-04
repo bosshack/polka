@@ -38,5 +38,6 @@ get_bundle tpope vim-surround
 get_bundle tpope vim-unimpaired
 get_bundle tpope vim-fugitive
 get_bundle altercation vim-colors-solarized
+get_bundle vim-scripts matchit.zip
 
 vim -c 'call pathogen#helptags()|q'
