@@ -1,0 +1,6 @@
+# vim: set ft=sh sw=2 ts=2 expandtab:
+
+alias rtags='rdoc -f tags app lib vendor config'
+
+# For exuberant ctags. Note: this does not grab constants
+#alias rtags='ctags -R --exclude=.git --exclude=log --exclude=tmp --exclude=doc --languages=-javascript,+ruby *'
