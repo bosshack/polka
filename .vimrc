@@ -85,10 +85,10 @@ let mapleader=','
 let maplocalleader=','
 
 " No arrow keys
-map <Left>  :echo "lolwut?"<cr>
-map <Right> :echo "lolwut?"<cr>
-map <Up>    :echo "lolwut?"<cr>
-map <Down>  :echo "lolwut?"<cr>
+map <Left>  :echo "ಠ_ಠ"<cr>
+map <Right> :echo "ಠ_ಠ"<cr>
+map <Up>    :echo "ಠ_ಠ"<cr>
+map <Down>  :echo "ಠ_ಠ"<cr>
 
 " Jump key
 nnoremap ` '
