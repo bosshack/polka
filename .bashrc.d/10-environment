@@ -7,6 +7,8 @@ HISTCONTROL=erasedups
 
 shopt -s globstar
 
+stty -ixon
+
 prepend_path "${HOME}/bin" "$(brew --prefix)/bin" "$(brew --prefix)/sbin"
 append_path "$(brew --cellar)/python"
 
