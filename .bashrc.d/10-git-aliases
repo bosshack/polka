@@ -9,3 +9,4 @@ alias glod='git log --oneline --decorate'
 alias gp='git push'
 alias gpr='git pull --rebase'
 alias gst='git status'
+alias glv="git log -p -40 | vim - -R -c 'set foldmethod=syntax'"
