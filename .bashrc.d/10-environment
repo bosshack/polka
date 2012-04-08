@@ -9,6 +9,8 @@ shopt -s globstar
 
 stty -ixon
 
+ulimit -n 4096
+
 prepend_path "${HOME}/bin" "$(brew --prefix)/bin" "$(brew --prefix)/sbin"
 append_path "$(brew --cellar)/python"
 
