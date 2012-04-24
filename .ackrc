@@ -1,2 +1,9 @@
---type-set=haml=.haml
---type-set=sass=.scss,sass
+--type-set=cucumber=.feature
+--type-add=html=.haml,.erb
+--type-add=ruby=.haml
+--type-add=css=.scss,.sass
+--type-add=js=.coffee
+
+--ignore-dir=tmp
+--ignore-dir=coverage
+--ignore-dir=doc
