@@ -1,11 +1,11 @@
 # vim: set ft=sh sw=2 ts=2 expandtab:
 
-# RVM
-if [[ -d "${HOME}/.rvm" ]]; then
-  [[ -s "${HOME}/.rvm/scripts/rvm" ]] && . "${HOME}/.rvm/scripts/rvm" # Load RVM function
-  [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
-# RBENV
-elif [[ -d "${HOME}/.rbenv" ]]; then
+if [[ -d "${HOME}/.rbenv" ]]; then
+  # RBENV
   prepend_path "${HOME}/.rbenv/bin"
   eval "$(rbenv init -)"
+elif [[ -d "${HOME}/.rvm" ]]; then
+  # RVM
+  [[ -s "${HOME}/.rvm/scripts/rvm" ]] && . "${HOME}/.rvm/scripts/rvm" # Load RVM function
+  [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
 fi
