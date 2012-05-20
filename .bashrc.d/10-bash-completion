@@ -1,6 +1,6 @@
 # vim: set ft=sh sw=2 ts=2 expandtab:
 
 # Homebrew bash completion
-if [[ $(uname) == 'Dawin' && -f $(brew --prefix)/etc/bash_completion ]]; then
+if [[ $(uname) == 'Darwin' && -f $(brew --prefix)/etc/bash_completion ]]; then
   . $(brew --prefix)/etc/bash_completion
 fi
