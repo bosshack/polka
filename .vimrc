@@ -116,6 +116,13 @@ if filereadable(expand('~/.vimrc.local'))
 endif
 
 "=============================================
+" Turbux.vim
+"=============================================
+
+" Apply common command prefix
+let g:turbux_command_prefix = 'bundle exec'
+
+"=============================================
 " Rails.vim extensions
 "=============================================
 
