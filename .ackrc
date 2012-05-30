@@ -7,3 +7,7 @@
 --ignore-dir=tmp
 --ignore-dir=coverage
 --ignore-dir=doc
+--ignore-dir=vendor
+--ignore-dir=stories
+--ignore-dir=public/system
+--ignore-dir=public/uploads
