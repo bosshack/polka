@@ -16,7 +16,7 @@ if [[ "$(uname)" == 'Darwin' ]]; then
   ulimit -n 4096
 
   # Setup path with homebrew
-  prepend_path "${HOME}/bin" "$(brew --prefix)/bin" "$(brew --prefix)/sbin"
+  prepend_path "$(brew --prefix)/bin" "$(brew --prefix)/sbin"
   append_path "$(brew --cellar)/python"
 
   # Custom prompt for osx
@@ -26,9 +26,9 @@ if [[ "$(uname)" == 'Darwin' ]]; then
   else
     [ -z "$PS1" ] || export PS1="┌─[\[\033[32m\]\u\[\033[0m\]]─[\[\033[36m\]\w\[\033[0m\]]\$(git_prompt_info '─[\[\033[34m\]%b\[\033[0m\]]')\n└─> "  
   fi
-else
-  prepend_path "${HOME}/bin"
 fi
+
+prepend_path "${HOME}/bin"
 
 export EDITOR CLICOLOR HISTSIZE HISTCONTROL
 
