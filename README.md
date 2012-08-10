@@ -20,8 +20,18 @@ Polka *will* nuke your current dotfiles, so first make sure to back up any macro
 
 ### Dependencies
 
-* OSX 10.6
+* OSX 10.6 (sort of)
 * Homebrew
+  Formulas we recommend:
+```
+bash
+reattach-to-user-namespace (for tmux)
+wemux
+ack
+bash-completion
+hub
+nethack
+```
 * Git
 * Bash ~> 4.2
 
