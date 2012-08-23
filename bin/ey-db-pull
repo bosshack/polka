@@ -25,8 +25,8 @@ app_name="\$( sudo ruby <<EOP
   print conf['applications'].first.first.strip
   exit 0
 EOP )"
-db_name=\$( awk '/database/ { print \$2 }' "/data/\${app_name}/shared/config/database.yml" )
-mysqldump "\$db_name" > "$remote_file"
+db_name=\$( awk -F\' '/database/ { print \$2 }' "/data/\${app_name}/shared/config/database.yml" )
+mysqldump \$db_name > "$remote_file"
 gzip "$remote_file"
 exit 0
 EOF

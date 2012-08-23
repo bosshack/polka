@@ -27,7 +27,7 @@ app_name="\$( sudo ruby <<EOP
   print conf['applications'].first.first.strip
   exit 0
 EOP )"
-db_name=\$( awk '/database/ { print \$2 }' "/data/\${app_name}/shared/config/database.yml" )
+db_name=\$( awk -F\' '/database/ { print \$2 }' "/data/\${app_name}/shared/config/database.yml" )
 gunzip "${remote_file}.gz"
 mysql "\$db_name" < "$remote_file"
 rm "$remote_file"
