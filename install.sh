@@ -14,10 +14,6 @@ for dotfile in $(find $DIR -maxdepth 1 -type f -name ".*"); do
   fi
 done
 
-# RVM script now replaced with generic script for rbenv compatibility
-# TODO: REMOVE after everyone runs this
-[ -L "${HOME}/.bashrc.d/99-load-rvm" ] && rm -f "${HOME}/.bashrc.d/99-load-rvm" 
-
 # Link rc files in .bashrc.d
 [ -d "${HOME}/.bashrc.d" ] || mkdir "${HOME}/.bashrc.d"
 for dotfile in ${DIR}/.bashrc.d/*; do
