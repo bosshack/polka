@@ -38,4 +38,5 @@ for bundle in ${DIR}/.vim/*.bundle; do
     ln -fs $bundle "${HOME}/.vim/$(basename $bundle)"
 done
 
-exec "${DIR}/bin/vim-bundle"
+(exec "${DIR}/bin/git-config.sh")
+(exec "${DIR}/bin/vim-bundle")
