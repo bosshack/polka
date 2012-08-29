@@ -4,6 +4,7 @@ depuracao vim-rdoc
 duff vim-scratch
 godlygeek tabular
 kchmck vim-coffee-script
+kien ctrlp.vim
 Lokaltog vim-powerline
 mileszs ack.vim
 pangloss vim-javascript
