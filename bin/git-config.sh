@@ -11,6 +11,7 @@ if [[ -s "${HOME}/.gitconfig" ]]; then
     echo "Skipping git-config.sh"
     exit 0
   fi
+  rm -f "${HOME}/.gitconfig"
 fi
 
 global_config() {
