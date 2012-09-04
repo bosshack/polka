@@ -28,17 +28,17 @@ global_config "color.ui" "true"
 
 global_config "core.excludesfile" "${HOME}/.cvsignore"
 
-global_config "alias.st" "status"
-global_config "alias.ci" "commit -v"
-global_config "alias.co" "checkout"
-global_config "alias.di" "diff"
-global_config "alias.dc" "diff --cached"
 global_config "alias.aa" "add --all"
 global_config "alias.amend" "commit -v --amend"
-global_config "alias.ff" "merge --ff-only"
+global_config "alias.ci" "commit -v"
+global_config "alias.co" "checkout"
+global_config "alias.dc" "diff --cached"
+global_config "alias.di" "diff"
 global_config "alias.fa" "fetch --all"
+global_config "alias.ff" "merge --ff-only"
 global_config "alias.pom" "push origin master"
 global_config "alias.pum" "push upstream master"
+global_config "alias.st" "status"
 global_config "alias.tr" "log --all --oneline --decorate --graph"
 
 exit 0
