@@ -36,3 +36,9 @@ tramp
 # Org-mode
 .org-id-locations
 *_archive
+
+##############################
+# Ruby
+##############################
+.rbenv-version
+.rvmrc
