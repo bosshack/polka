@@ -40,5 +40,8 @@ global_config "alias.pom" "push origin master"
 global_config "alias.pum" "push upstream master"
 global_config "alias.st" "status"
 global_config "alias.tr" "log --all --oneline --decorate --graph"
+global_config "color.status.added" "green"
+global_config "color.status.changed" "yellow"
+global_config "color.status.untracked" "red"
 
 exit 0
