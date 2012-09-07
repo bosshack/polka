@@ -25,6 +25,9 @@ global_config "user.name" "$name"
 global_config "user.email" "$email"
 
 global_config "color.ui" "true"
+global_config "color.status.added" "green"
+global_config "color.status.changed" "yellow"
+global_config "color.status.untracked" "red"
 
 global_config "core.excludesfile" "${HOME}/.cvsignore"
 
@@ -40,8 +43,5 @@ global_config "alias.fa" "fetch --all"
 global_config "alias.pom" "push origin master"
 global_config "alias.pum" "push upstream master"
 global_config "alias.tr" "log --all --oneline --decorate --graph"
-global_config "color.status.added" "green"
-global_config "color.status.changed" "yellow"
-global_config "color.status.untracked" "red"
 
 exit 0
