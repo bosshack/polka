@@ -1,0 +1,11 @@
+# vim: set ft=sh sw=2 ts=2 expandtab:
+alias taskpaper="vim ~/Dropbox/todo/todo.taskpaper"
+
+gopen() {
+  if [ -z $1 ]
+  then
+    echo "Must provide a thing to open!"
+  else
+    open *"$1"*
+  fi
+}
