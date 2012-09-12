@@ -1,0 +1,9 @@
+set list listchars=tab:\ \ ,trail:·
+let g:UltiSnipsSnippetsDir="~/.vim/bundles/UltiSnips/UltiSnips/"
+
+set background=light
+let Powerline_colorscheme="default"
+let g:Powerline_symbols = 'fancy'
+
+" set up soft wrap
+command! -nargs=* Wrap set wrap linebreak nolist
