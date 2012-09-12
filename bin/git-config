@@ -1,0 +1,68 @@
+#!/bin/bash
+#
+# This will setup a gitconfig file if one does not exist
+
+set -e
+
+if [[ -s "${HOME}/.gitconfig" ]]; then
+  read -n1 -p "${HOME}/.gitconfig already exists would you like to overwrite it? " answer
+  echo
+  if [[ "$answer" != "y" && "$answer" != "Y" ]]; then
+    echo "Skipping git-config.sh"
+    exit 0
+  fi
+  rm -f "${HOME}/.gitconfig"
+fi
+
+global_config() {
+  git config --global "$1" "$2"
+}
+
+read -p "Full name: " name
+read -p "Email address: " email
+
+global_config "user.name"   "$name"
+global_config "user.email"  "$email"
+
+global_config "color.ui"                "true"
+global_config "color.status.added"      "green"
+global_config "color.status.changed"    "yellow"
+global_config "color.status.untracked"  "red"
+
+global_config "core.excludesfile" "${HOME}/.cvsignore"
+
+global_config "alias.st"    "status"
+global_config "alias.co"    "checkout"
+global_config "alias.aa"    "add --all"
+global_config "alias.fa"    "fetch --all"
+global_config "alias.ff"    "merge --ff-only"
+
+global_config "alias.ci"    "commit -v"
+global_config "alias.amend" "commit -v --amend"
+
+global_config "alias.di"    "diff"
+global_config "alias.dc"    "diff --cached"
+global_config "alias.dh1"   "diff HEAD~1"
+
+global_config "alias.po"    "push origin"
+global_config "alias.pom"   "push origin master"
+global_config "alias.pu"    "push upstream"
+global_config "alias.pum"   "push upstream master"
+
+# Fancy logging.
+#   h = head
+#   hp = head with patch
+#   r = recent commits, only current branch
+#   ra = recent commits, all reachable refs
+#   l = all commits, only current branch
+#   la = all commits, all reachable refs
+
+global_config "alias.head"  "!git l -1"
+global_config "alias.h"     "!git head"
+global_config "alias.hp"    "!source ${HOME}/lib/githelpers && show_git_head"
+global_config "alias.r"     "!git l -30"
+global_config "alias.ra"    "!git r --all"
+global_config "alias.l"     "!source ${HOME}/lib/githelpers && pretty_git_log"
+global_config "alias.la"    "!git l --all"
+
+exit 0
