@@ -1,0 +1,5 @@
+echo "root=Dir.pwd" >> config.tmp.ru
+echo "puts \">>> Serving: #{root}\"" >> config.tmp.ru
+echo "run Rack::Directory.new(\"#{root}\")" >> config.tmp.ru
+thin start -R config.tmp.ru -p 8080
+rm config.tmp.ru
