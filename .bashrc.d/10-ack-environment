@@ -1,0 +1,3 @@
+# vim:set ft=sh sw=2 ts=2 expandtab:
+ACK_PAGER="less -r"
+export ACK_PAGER
