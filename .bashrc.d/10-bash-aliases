@@ -1,0 +1,4 @@
+alias la="ls -A"
+alias lt='ls -lhart'
+alias ll="ls -lsvAt"
+alias git="hub"
