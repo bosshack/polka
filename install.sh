@@ -49,5 +49,5 @@ done
 find -L -X "${HOME}" "${HOME}/.bashrc.d" "${HOME}/bin" "${HOME}/lib" -maxdepth 1 -type l | xargs rm
 
 # execute scripts on install
-(exec "${DIR}/bin/git-config")
+(exec "${DIR}/bin/setup-gitconfig")
 (exec "${DIR}/bin/vim-bundle")
