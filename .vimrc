@@ -2,6 +2,11 @@
 " Initialization
 "=============================================
 
+" Load user settings
+if filereadable(expand('~/.vimrc.plugin_settings'))
+  source ~/.vimrc.plugin_settings
+endif
+
 " Load pathogen if it is found
 if filereadable(expand('~/.vim/bundles/vim-pathogen/autoload/pathogen.vim'))
   source ~/.vim/bundles/vim-pathogen/autoload/pathogen.vim
@@ -111,22 +116,6 @@ nnoremap <localleader>/ :nohlsearch<CR>
 nnoremap <localleader>ws m`:%s/\s\+$//e<CR>``
 
 "=============================================
-" Additional Config Files
-"=============================================
-
-" Load user settings
-if filereadable(expand('~/.vimrc.local'))
-  source ~/.vimrc.local
-endif
-
-"=============================================
-" Turbux.vim
-"=============================================
-
-" Apply common command prefix
-let g:turbux_command_prefix = 'bundle exec'
-
-"=============================================
 " Rails.vim extensions
 "=============================================
 
@@ -139,3 +128,13 @@ autocmd User Rails Rnavcommand fabricator spec/fabricators -suffix=_fabricator.r
 autocmd User Rails Rnavcommand feature features -suffix=.feature -default=cucumber
 autocmd User Rails Rnavcommand support spec/support features/support -default=env
 autocmd User Rails Rnavcommand worker app/workers -suffix=_worker.rb -default=model()
+
+"=============================================
+" Additional Config Files
+"=============================================
+
+" Load user settings
+if filereadable(expand('~/.vimrc.local'))
+  source ~/.vimrc.local
+endif
+
