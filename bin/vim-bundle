@@ -3,11 +3,13 @@
 
 set -e
 
-read -n1 -p 'Would you like to update vim bundles? ' answer
-echo
-if [[ "$answer" != "y" && "$answer" != "Y" ]]; then
-  echo "Skipping vim-bundle"
-  exit 0
+if [[ "$1" == '--confirm' ]]; then
+  read -n1 -p 'Would you like to update vim bundles? ' answer
+  echo
+  if [[ "$answer" != "y" && "$answer" != "Y" ]]; then
+    echo "Skipping vim-bundle"
+    exit 0
+  fi
 fi
 
 success() {

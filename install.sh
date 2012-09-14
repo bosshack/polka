@@ -50,4 +50,4 @@ find -L -X "${HOME}" "${HOME}/.bashrc.d" "${HOME}/bin" "${HOME}/lib" -maxdepth 1
 
 # execute scripts on install
 (exec "${DIR}/bin/setup-gitconfig")
-(exec "${DIR}/bin/vim-bundle")
+(exec "${DIR}/bin/vim-bundle" "--confirm" )
