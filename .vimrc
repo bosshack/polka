@@ -53,6 +53,10 @@ set cursorline
 set laststatus=2 " Always show status bar
 set nowrap
 
+" Visible whitespace
+set listchars=tab:»·,trail:·
+set list
+
 " Buffers
 set hidden
 
