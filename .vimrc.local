@@ -15,3 +15,17 @@ hi! clear IncSearch
 hi! clear Search
 hi! IncSearch term=undercurl cterm=undercurl gui=undercurl
 hi! Search term=undercurl cterm=undercurl gui=undercurl
+
+"=============================================
+" Promote Variable to Rspec Let
+"=============================================
+
+function! PromoteToLet()
+  :normal! dd
+  " :exec '?^\s*it\>'
+  :normal! P
+  :.s/\(\w\+\) = \(.*\)$/let(:\1) { \2 }/
+  :normal ==
+endfunction
+:command! PromoteToLet :call PromoteToLet()
+:map <leader>p :PromoteToLet<cr>
