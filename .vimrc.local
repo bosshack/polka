@@ -1,0 +1,17 @@
+"=============================================
+" Color Scheme Overrides
+"=============================================
+"
+" Solarized Defaults
+" exe "hi! IncSearch term=stdout cterm=stdout ctermfg=9 gui=reverse
+" exe "hi! Search term=reverse cterm=reverse ctermfg=3 guifg=Black guibg=Yellow"
+
+" Colors and underline
+" hi! IncSearch term=undercurl cterm=undercurl ctermfg=9 gui=undercurl
+" hi! Search term=undercurl cterm=undercurl ctermfg=3 guifg=Black guibg=Black 
+
+" Underline Only
+hi! clear IncSearch
+hi! clear Search
+hi! IncSearch term=undercurl cterm=undercurl gui=undercurl
+hi! Search term=undercurl cterm=undercurl gui=undercurl
