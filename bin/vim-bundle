@@ -13,10 +13,19 @@ if [[ "$1" == '--confirm' ]]; then
 fi
 
 success() {
-  echo "$(tput setaf 2)${1}$(tput sgr0)"
+  output "2" "$1"
 }
+
 error() {
-  echo "$(tput setaf 1)${1}$(tput sgr0)"
+  output "1" "$1"
+}
+
+output() {
+  if  [ -t 1 ]; then
+    echo "$(tput setaf $1)${2}$(tput sgr0)"
+  else
+    echo ${2}
+  fi
 }
 
 get_bundle() {
