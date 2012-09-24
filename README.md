@@ -23,13 +23,13 @@ Polka *will* nuke your current dotfiles, so first make sure to back up any macro
 * OSX 10.6 (sort of, it's pretty linux compatible)
 * Homebrew (also not required, but we use it.)
   Formulas we recommend:
-```
-bash
-reattach-to-user-namespace (for tmux)
-ack
-bash-completion
-nethack
-```
+
+- bash
+- reattach-to-user-namespace (for tmux)
+- ack
+- bash-completion
+- nethack
+
 * Git
 * Bash ~> 4.2
 
