@@ -10,7 +10,7 @@ Polka *will* nuke your current dotfiles, so first make sure to back up any macro
 
 ###To install:###
 
-1. Clone the project, preferably to a folder in your home directory entitled ~/Projects/. (I'm not sure, the project used to depend on that folder name, need to decouple.)
+1. Clone the project, preferably to a folder in your home directory entitled ~/projects/.
 
 2. Run ./install.sh. This will do a lot of magic very quickly, so here are the important bits:
     - It's going to create new .bashrc, .bash_profile, and .vimrc files (among others), as well as a new .vim folder and a ~/bin folder. The files will all actually live in your ~/Projects/polka folder, and be symlinked to their proper places. This way you can keep them tied to the git repo, and update them with a simple git pull.
