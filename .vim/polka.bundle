@@ -17,4 +17,5 @@ tpope vim-rails
 tpope vim-repeat
 tpope vim-surround
 vim-ruby vim-ruby
+vim-scripts fish.vim
 vim-scripts matchit.zip

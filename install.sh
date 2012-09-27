@@ -20,6 +20,11 @@ for dotfile in ${DIR}/.bashrc.d/*; do
     ln -fs $dotfile "${HOME}/.bashrc.d/$(basename $dotfile)"
 done
 
+[ -d "${HOME}/.config/fish" ] || mkdir -p "${HOME}/.config/fish"
+for dotfile in ${DIR}/.config/fish/*; do
+    ln -fs $dotfile "${HOME}/.config/fish/$(basename $dotfile)"
+done
+
 # Link files in bin
 [ -d "${HOME}/bin" ] || mkdir "${HOME}/bin"
 for file in ${DIR}/bin/*; do
