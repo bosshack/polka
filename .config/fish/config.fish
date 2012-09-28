@@ -25,7 +25,7 @@ function __git_current_branch
 end
 
 function __git_working_tree_status
-  git status --porcelain | sort -u | __format_git_working_tree | tr -d '\n'
+  git status --porcelain | __format_git_working_tree | sort -u | tr -d '\n'
 end
 
 function __format_git_working_tree
