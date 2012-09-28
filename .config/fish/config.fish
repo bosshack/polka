@@ -58,3 +58,7 @@ rbenv rehash >/dev/null ^&1
 function rtags
   rdoc -f tags app lib vendor config $argv
 end
+
+function be
+  bundle exec "$argv"
+end
