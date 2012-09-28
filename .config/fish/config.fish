@@ -12,7 +12,7 @@ end
 set fish_greeting ""
 
 function __in_git_working_tree
-  [ "true" = (git rev-parse --is-inside-work-tree ^ /dev/null; or echo false) ]
+  git rev-parse --is-inside-work-tree >/dev/null ^&1
 end
 
 function __git_current_head
