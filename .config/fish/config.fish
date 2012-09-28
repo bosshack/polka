@@ -11,35 +11,46 @@ end
 
 set fish_greeting ""
 
-function parse_git_branch
-  sh -c 'git branch --no-color 2> /dev/null' | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
+function __in_git_working_tree
+  [ "true" = (git rev-parse --is-inside-work-tree ^ /dev/null; or echo false) ]
+end
+
+function __git_current_head
+  git symbolic-ref HEAD ^ /dev/null
+  or git describe --contains --all HEAD
+end
+
+function __git_current_branch
+  __git_current_head | sed -e "s#^refs/heads/##"
+end
+
+function __git_working_tree_status
+  git status --porcelain | sort -u | __format_git_working_tree | tr -d '\n'
+end
+
+function __format_git_working_tree
+  set m (set_color yellow)'*'(set_color normal)
+  set d (set_color red)'-'(set_color normal)
+  set a (set_color green)'+'(set_color normal)
+  sed -e "s/^.\(.\).*/\1/" -e "s/M/$m/" -e "s/D/$d/" -e "s/?/$a/"
 end
 
 function fish_prompt -d "Write out the prompt"
-  printf '┌─[%s%s@%s%s]─[' (set_color yellow) (whoami) (hostname|cut -d . -f 1) (set_color normal)
+  printf '%s%s@%s%s ' (set_color yellow) (whoami) (hostname|cut -d . -f 1) (set_color normal)
 
   # Color writeable dirs green, read-only dirs red
   if test -w "."
-    printf '%s%s%s]' (set_color green) (prompt_pwd) (set_color normal)
+    printf '%s%s%s' (set_color green) (prompt_pwd) (set_color normal)
   else
-    printf '%s%s%s]' (set_color red) (prompt_pwd) (set_color normal)
-  end
-
-        # Print subversion tag or branch
-        if test -d ".svn"
-          printf ' %s%s%s' (set_color normal) (set_color blue) (parse_svn_tag_or_branch)
-        end
-
-  # Print subversion revision
-  if test -d ".svn"
-    printf '%s%s@%s' (set_color normal) (set_color blue) (parse_svn_revision)
+    printf '%s%s%s' (set_color red) (prompt_pwd) (set_color normal)
   end
 
   # Print git branch
-  if test -d ".git"
-    printf '%s─[%s%s%s]' (set_color normal) (set_color blue) (parse_git_branch) (set_color normal)
+  if __in_git_working_tree
+    printf '%s %s%s%s %s' (set_color normal) (set_color blue) (__git_current_branch) (set_color normal) (__git_working_tree_status)
   end
-  printf '%s\n└─> ' (set_color normal)
+
+  printf '%s\n❯ ' (set_color normal)
 end
 
 rbenv rehash >/dev/null ^&1
