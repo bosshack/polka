@@ -63,10 +63,10 @@ global_config "alias.pum"   "push upstream master"
 
 global_config "alias.head"  "!git l -1"
 global_config "alias.h"     "!git head"
-global_config "alias.hp"    "!source ${HOME}/lib/githelpers && show_git_head"
+global_config "alias.hp"    "!. ${HOME}/lib/githelpers && show_git_head"
 global_config "alias.r"     "!git l -30"
 global_config "alias.ra"    "!git r --all"
-global_config "alias.l"     "!source ${HOME}/lib/githelpers && pretty_git_log"
+global_config "alias.l"     "!. ${HOME}/lib/githelpers && pretty_git_log"
 global_config "alias.la"    "!git l --all"
 
 exit 0
