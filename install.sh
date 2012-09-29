@@ -46,7 +46,7 @@ for bundle in ${DIR}/.vim/*.bundle; do
 done
 
 # Remove broken symlinks
-find -L -X "${HOME}" "${HOME}/.bashrc.d" "${HOME}/bin" "${HOME}/lib" -maxdepth 1 -type l | xargs rm
+find -L "${HOME}" "${HOME}/.bashrc.d" "${HOME}/bin" "${HOME}/lib" -maxdepth 1 -type l | xargs rm 2>/dev/null
 
 # execute scripts on install
 (exec "${DIR}/bin/setup-gitconfig")
