@@ -34,6 +34,8 @@ global_config "core.excludesfile" "${HOME}/.cvsignore"
 global_config "branch.autosetuprebase"  "always"
 global_config "pull.rebase"             "true"
 
+global_config "push.default" "simple"
+
 global_config "alias.st"    "status"
 global_config "alias.co"    "checkout"
 global_config "alias.aa"    "add --all"
