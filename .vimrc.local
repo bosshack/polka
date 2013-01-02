@@ -7,3 +7,8 @@ let g:Powerline_symbols = 'fancy'
 
 " set up soft wrap
 command! -nargs=* Wrap set wrap linebreak nolist
+
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
+au FileType javascript setl conceallevel=2 concealcursor=nc
+let g:syntax_js=['function', 'return', 'solarized', 'this', 'proto']

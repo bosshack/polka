@@ -11,3 +11,5 @@ davidoc taskpaper.vim
 dcpu16 dcpu16-vim-syntax
 tpope vim-speeddating
 Lokaltog vim-easymotion
+drslump vim-syntax-js
+ehamberg vim-cute-python
