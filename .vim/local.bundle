@@ -13,3 +13,4 @@ tpope vim-speeddating
 Lokaltog vim-easymotion
 drslump vim-syntax-js
 ehamberg vim-cute-python
+chriskempson base16-vim
