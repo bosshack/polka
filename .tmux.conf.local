@@ -2,7 +2,7 @@ set -g status-position top
 set -g status-left-length 32
 set -g status-right-length 150
 
-set -g status-fg brightblue
+set -g status-fg blue
 set -g status-bg black
 set -g window-status-activity-attr bold
 set -g pane-border-fg brightgreen
@@ -11,7 +11,7 @@ set -g message-fg yellow
 set -g message-bg black
 set -g message-attr bold
 
-set -g status-left '#[fg=white,bg=brightcyan,bold] ❐ #S #[fg=brightcyan,bg=brightyellow,nobold]⮀#[fg=brightcyan,bg=brightyellow,bold] #(whoami) #[fg=brightyellow,bg=black,nobold]⮀'
+set -g status-left '#[fg=brightwhite,bg=blue,bold] ❐ #S #[fg=blue,bg=brightyellow,nobold]⮀#[fg=blue,bg=brightyellow,bold] #(whoami) #[fg=brightyellow,bg=black,nobold]⮀'
 set -g window-status-format "#[fg=yellow,bg=black] #I #W "
-set -g window-status-current-format "#[fg=black,bg=yellow]⮀#[fg=brightwhite,bg=yellow,noreverse,bold] #I ⮁ #W #[fg=yellow,bg=black,nobold]⮀"
+set -g window-status-current-format "#[fg=black,bg=yellow]⮀#[fg=black,bg=yellow,noreverse,bold] #I ⮁ #W #[fg=yellow,bg=black,nobold]⮀"
 set -g status-right "#(wemux status_users)"
