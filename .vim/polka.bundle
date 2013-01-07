@@ -1,4 +1,4 @@
-altercation vim-colors-solarized
+chriskempson base16-vim
 duff vim-scratch
 kchmck vim-coffee-script
 kien ctrlp.vim
