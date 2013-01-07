@@ -29,7 +29,3 @@ function! PromoteToLet()
 endfunction
 :command! PromoteToLet :call PromoteToLet()
 :map <leader>p :PromoteToLet<cr>
-
-if $SHELL =~ '/usr/local/bin/fish'
-  set shell=/usr/local/bin/bash
-endif
