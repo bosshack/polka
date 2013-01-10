@@ -1,7 +1,7 @@
 set list listchars=tab:\ \ ,trail:·
 let g:UltiSnipsSnippetsDir="~/.vim/bundles/UltiSnips/UltiSnips/"
 
-colorscheme base16-tomorrow
+colorscheme base16-default
 set background=dark
 let Powerline_colorscheme="default"
 let g:Powerline_symbols = 'fancy'
