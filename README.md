@@ -1,6 +1,6 @@
 # Polka
 
-Development configuration for the fishbowl. This is a very opinionated setup, strongly believing in mac osx, vim, ruby on rails, and the [solarized](http://ethanschoonover.com/solarized) color scheme.
+Development configuration for the fishbowl. This is a very opinionated setup, strongly believing in mac osx, vim, ruby on rails, and the [base16](https://github.com/chriskempson/base16) color scheme.
 
 ##WARNING!##
 
