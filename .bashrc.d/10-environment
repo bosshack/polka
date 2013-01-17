@@ -18,6 +18,8 @@ if [[ "$(uname)" == 'Darwin' ]]; then
   # Setup path with homebrew
   prepend_path "$(brew --prefix)/bin" "$(brew --prefix)/sbin"
   append_path "$(brew --cellar)/python"
+  # pips binaries
+  append_path "/usr/local/share/python"
 fi
 
 if [[ -d "${HOME}/.rbenv" ]]; then
