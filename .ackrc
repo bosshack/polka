@@ -1,4 +1,4 @@
---type-set=cucumber=.feature
+--type-set=cucumber=.feature,.feature_off
 --type-add=html=.haml,.erb
 --type-add=ruby=.haml
 --type-add=css=.scss,.sass
