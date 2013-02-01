@@ -13,3 +13,4 @@ tpope vim-speeddating
 Lokaltog vim-easymotion
 drslump vim-syntax-js
 chriskempson base16-vim
+goldfeld vim-seek

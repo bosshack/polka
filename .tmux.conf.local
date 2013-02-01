@@ -11,7 +11,7 @@ set -g message-fg yellow
 set -g message-bg black
 set -g message-attr bold
 
-set -g status-left '#[fg=brightwhite,bg=blue,bold] ❐ #S #[fg=blue,bg=brightyellow,nobold]⮀#[fg=blue,bg=brightyellow,bold] #(whoami) #[fg=brightyellow,bg=black,nobold]⮀'
+set -g status-left '#[fg=brightwhite,bg=blue,bold] ❐ #S #[fg=blue,bg=black,nobold]⮀#[fg=blue,bg=brightyellow,bold] #(whoami) #[fg=brightyellow,bg=black,nobold]⮀'
 set -g window-status-format "#[fg=yellow,bg=black] #I #W "
 set -g window-status-current-format "#[fg=black,bg=yellow]⮀#[fg=black,bg=yellow,noreverse,bold] #I ⮁ #W #[fg=yellow,bg=black,nobold]⮀"
 set -g status-right "#(wemux status_users)"
