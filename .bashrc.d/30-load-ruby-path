@@ -9,3 +9,6 @@ elif [[ -d "${HOME}/.rvm" ]]; then
   [[ -s "${HOME}/.rvm/scripts/rvm" ]] && . "${HOME}/.rvm/scripts/rvm" # Load RVM function
   [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
 fi
+
+# le bin stubs
+prepend_path "./bin"
