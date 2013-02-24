@@ -10,9 +10,9 @@ if filereadable(expand('~/.vimrc.plugin_settings'))
 endif
 
 " Load pathogen if it is found
-if filereadable(expand('~/.vim/bundles/vim-pathogen/autoload/pathogen.vim'))
-  source ~/.vim/bundles/vim-pathogen/autoload/pathogen.vim
-  call pathogen#infect(expand('~/.vim/bundles'))
+if filereadable(expand('~/.vim/bundle/vim-pathogen/autoload/pathogen.vim'))
+  source ~/.vim/bundle/vim-pathogen/autoload/pathogen.vim
+  call pathogen#infect(expand('~/.vim/bundle'))
 endif
 
 " Start .vimrc
