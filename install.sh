@@ -35,7 +35,7 @@ for file in ${DIR}/lib/*; do
     ln -fs $file "${HOME}/lib/$(basename $file)"
 done
 
-[ -d "${HOME}/.vim/bundles" ] || mkdir -p "${HOME}/.vim/bundles"
+[ -d "${HOME}/.vim/bundle" ] || mkdir -p "${HOME}/.vim/bundle"
 [ -d "${HOME}/.vim/backups" ] || mkdir -p "${HOME}/.vim/backups"
 [ -d "${HOME}/.vim/swaps" ]   || mkdir -p "${HOME}/.vim/swaps"
 [ -d "${HOME}/.vim/undo" ]    || mkdir -p "${HOME}/.vim/undo"
