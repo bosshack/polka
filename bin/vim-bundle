@@ -52,8 +52,8 @@ get_bundle() {
   )
 }
 
-[ -d "${HOME}/.vim/bundles" ] || mkdir -p "${HOME}/.vim/bundles"
-cd "${HOME}/.vim/bundles"
+[ -d "${HOME}/.vim/bundle" ] || mkdir -p "${HOME}/.vim/bundle"
+cd "${HOME}/.vim/bundle"
 
 # Read each ~/.vim/*.bundle file and install it
 for bundle in ${HOME}/.vim/*.bundle; do
