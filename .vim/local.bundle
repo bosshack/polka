@@ -4,6 +4,7 @@ chriskempson base16-vim
 davidoc taskpaper.vim
 dcpu16 dcpu16-vim-syntax
 drslump vim-syntax-js
+golangtw gocode.vim
 gregsexton MatchTag
 mattn gist-vim
 mattn webapi-vim
