@@ -6,6 +6,9 @@ set background=dark
 let Powerline_colorscheme="default"
 let g:Powerline_symbols = 'fancy'
 
+" make sure vimgutter looks good
+highlight clear SignColumn
+
 " set up soft wrap
 command! -nargs=* Wrap set wrap linebreak nolist
 

@@ -1,5 +1,6 @@
 Lokaltog vim-easymotion
 SirVer ultisnips
+airblade vim-gitgutter
 chriskempson base16-vim
 davidoc taskpaper.vim
 dcpu16 dcpu16-vim-syntax
