@@ -7,7 +7,12 @@ let Powerline_colorscheme="default"
 let g:Powerline_symbols = 'fancy'
 
 " make sure vimgutter looks good
-highlight clear SignColumn
+highlight SignColumn ctermbg=black
+highlight link GitGutterAdd DiffAdd
+highlight link GitGutterChange DiffChange
+highlight link GitGutterDelete DiffDelete
+highlight link GitGutterChangeDelete DiffChangeDelete
+let g:gitgutter_highlight_lines = 1
 
 " set up soft wrap
 command! -nargs=* Wrap set wrap linebreak nolist
