@@ -2,7 +2,7 @@
 
 if [[ -d "${HOME}/.rbenv" ]]; then
   # RBENV
-  prepend_path "${HOME}/.rbenv/bin"
+  prepend_path "${HOME}/.rbenv/shims" "${HOME}/.rbenv/bin"
   eval "$(rbenv init -)"
 elif [[ -d "${HOME}/.rvm" ]]; then
   # RVM
