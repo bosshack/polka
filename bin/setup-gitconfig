@@ -34,6 +34,9 @@ global_config "core.excludesfile" "${HOME}/.cvsignore"
 global_config "branch.autosetuprebase"  "always"
 global_config "pull.rebase"             "true"
 
+global_config "browser.gitscm.cmd" "/bin/sh -c 'open http://git-scm.com/docs/\$(basename \$1 .html)' --"
+global_config "help.browser" "gitscm"
+
 global_config "push.default" "simple"
 
 global_config "alias.st"    "status"
