@@ -12,7 +12,7 @@ endif
 " Load pathogen if it is found
 if filereadable(expand('~/.vim/bundle/vim-pathogen/autoload/pathogen.vim'))
   source ~/.vim/bundle/vim-pathogen/autoload/pathogen.vim
-  call pathogen#infect(expand('~/.vim/bundle'))
+  execute pathogen#infect()
 endif
 
 " Setup go
