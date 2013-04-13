@@ -1,8 +1,2 @@
----
-:benchmark: false
-install: --no-ri --no-rdoc
-update: --no-ri --no-rdoc
-:update_sources: true
-:bulk_threshold: 1000
-:verbose: true
-:backtrace: false
+install: --no-document --no-ri --no-rdoc
+update: --no-document --no-ri --no-rdoc
