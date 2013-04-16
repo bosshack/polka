@@ -15,3 +15,6 @@ set -g status-left '#[fg=brightwhite,bg=blue,bold] ❐ #S #[fg=blue,bg=brightyel
 set -g window-status-format "#[fg=yellow,bg=black] #I #W "
 set -g window-status-current-format "#[fg=black,bg=yellow]⮀#[fg=black,bg=yellow,noreverse,bold] #I ⮁ #W #[fg=yellow,bg=black,nobold]⮀"
 set -g status-right "#(wemux status_users)"
+
+# make sure that escape works sensibly
+set -sg escape-time 0
