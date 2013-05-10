@@ -124,8 +124,6 @@ nnoremap <localleader>/ :nohlsearch<CR>
 " Trim trailing whitespace
 nnoremap <localleader>ws m`:%s/\s\+$//e<CR>``
 
-nnoremap <localleader>t :wa\|!ruby -Ilib:test %<cr>
-
 "=============================================
 " Rails.vim extensions
 "=============================================
