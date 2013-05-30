@@ -2,9 +2,7 @@
 
 [ -d "$PROJECT_DIR" ] || export PROJECT_DIR="${HOME}/projects"
 
-pcd() {
-  cd "${PROJECT_DIR}/$1"
-}
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
 # Tab Completion
 _pcd() {
