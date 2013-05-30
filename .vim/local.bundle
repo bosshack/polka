@@ -7,6 +7,7 @@ dcpu16 dcpu16-vim-syntax
 drslump vim-syntax-js
 golangtw gocode.vim
 gregsexton MatchTag
+marijnh tern_for_vim
 mattn gist-vim
 mattn webapi-vim
 nelstrom vim-qargs
