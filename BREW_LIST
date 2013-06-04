@@ -1,4 +1,5 @@
 ack
+autojump
 bar
 bash
 bash-completion
@@ -21,6 +22,7 @@ mutt
 mysql
 mysql-connector-c
 ncmpcpp
+netcat
 nethack
 nginx
 nmap
@@ -37,4 +39,5 @@ tree
 vim
 wemux
 wget
+youtube-dl
 zsh
