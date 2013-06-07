@@ -4,7 +4,7 @@ airblade vim-gitgutter
 chriskempson base16-vim
 davidoc taskpaper.vim
 dcpu16 dcpu16-vim-syntax
-drslump vim-syntax-js
+spencertipping js-vim-highlighter
 golangtw gocode.vim
 gregsexton MatchTag
 marijnh tern_for_vim
