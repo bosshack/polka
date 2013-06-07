@@ -5,6 +5,8 @@ kien ctrlp.vim
 bling vim-airline
 mileszs ack.vim
 pangloss vim-javascript
+tpope vim-bundler
+tpope vim-commentary
 tpope vim-cucumber
 tpope vim-endwise
 tpope vim-fugitive
