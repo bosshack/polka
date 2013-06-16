@@ -1,22 +1,3 @@
 # vim: set ft=sh sw=2 ts=2 expandtab:
 
-[ -d "$PROJECT_DIR" ] || export PROJECT_DIR="${HOME}/projects"
-
-[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
-
-# Tab Completion
-_pcd() {
-  local cur projects
-
-  [ -r "$PROJECT_DIR" ] || return 0
-
-  eval 'COMPREPLY=()'
-  cur=${COMP_WORDS[COMP_CWORD]}
-  projects=$(\ls "$PROJECT_DIR")
-  if [ $COMP_CWORD -eq 1 ]; then
-    eval 'COMPREPLY=( $(compgen -o filenames -W "$projects" $cur) )'
-  fi
-
-  return 0
-}
-complete -F _pcd pcd
+. `brew --prefix`/etc/profile.d/z.sh
