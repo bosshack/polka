@@ -20,6 +20,8 @@ if [[ "$(uname)" == 'Darwin' ]]; then
   append_path "$(brew --cellar)/python"
   # pips binaries
   append_path "/usr/local/share/python"
+  # npm binaries
+  append_path "/usr/local/share/npm/bin"
 fi
 
 if [[ -d "${HOME}/.rbenv" ]]; then
