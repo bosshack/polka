@@ -4,14 +4,16 @@ airblade vim-gitgutter
 chriskempson base16-vim
 davidoc taskpaper.vim
 dcpu16 dcpu16-vim-syntax
-spencertipping js-vim-highlighter
 golangtw gocode.vim
 gregsexton MatchTag
 marijnh tern_for_vim
 mattn gist-vim
 mattn webapi-vim
 nelstrom vim-qargs
+ricardovaleriano vim-github-theme
 scrooloose syntastic
+slim-template vim-slim
+spencertipping js-vim-highlighter
 tpope vim-eunuch
 tpope vim-speeddating
 uggedal go-vim
