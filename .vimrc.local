@@ -17,6 +17,7 @@ let g:gitgutter_highlight_lines = 0
 
 " set up soft wrap
 command! -nargs=* Wrap set wrap linebreak nolist
+let &showbreak='↪ '
 
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
