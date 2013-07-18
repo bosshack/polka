@@ -9,10 +9,10 @@ let g:bufferline_echo = 0
 
 " make sure vimgutter looks good
 highlight SignColumn ctermbg=black
-highlight link GitGutterAdd DiffAdd
-highlight link GitGutterChange DiffChange
-highlight link GitGutterDelete DiffDelete
-highlight link GitGutterChangeDelete DiffChangeDelete
+highlight GitGutterAdd ctermbg=black
+highlight GitGutterChange ctermbg=black
+highlight GitGutterDelete ctermbg=black
+highlight GitGutterChangeDelete ctermbg=black
 let g:gitgutter_highlight_lines = 0
 
 " change the line numbers color scheme
