@@ -29,3 +29,6 @@ let g:syntax_js=['function', 'return', 'solarized', 'this', 'proto']
 
 " make escape work sensibly
 set esckeys!
+
+" make sure ctrl p ignores build folder in middleman
+let g:ctrlp_custom_ignore = 'build/*'
