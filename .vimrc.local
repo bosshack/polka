@@ -15,9 +15,6 @@ highlight GitGutterDelete ctermbg=black
 highlight GitGutterChangeDelete ctermbg=black
 let g:gitgutter_highlight_lines = 0
 
-" change the line numbers color scheme
-highlight LineNr ctermfg=grey ctermbg=black
-
 " set up soft wrap
 command! -nargs=* Wrap set wrap linebreak nolist
 let &showbreak='↪ '
