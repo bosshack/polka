@@ -3,8 +3,8 @@ let g:UltiSnipsSnippetsDir="~/.vim/bundles/UltiSnips/UltiSnips/"
 
 colorscheme base16-default
 set background=dark
-let Powerline_colorscheme="default"
 let g:airline_powerline_fonts=1
+let g:airline_theme='tomorrow'
 let g:bufferline_echo = 0
 
 " make sure vimgutter looks good
