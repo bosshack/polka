@@ -1,6 +1,10 @@
 Lokaltog vim-easymotion
+Shougo unite.vim
+Shougo vimshell.vim
+Shougo/vimproc.vim
 SirVer ultisnips
 airblade vim-gitgutter
+chrisbra NrrwRgn
 chriskempson base16-vim
 davidoc taskpaper.vim
 dcpu16 dcpu16-vim-syntax
@@ -14,6 +18,7 @@ ricardovaleriano vim-github-theme
 scrooloose syntastic
 slim-template vim-slim
 spencertipping js-vim-highlighter
+terryma vim-multiple-cursors
 tpope vim-abolish
 tpope vim-eunuch
 tpope vim-speeddating
@@ -21,4 +26,3 @@ uggedal go-vim
 vim-scripts Gundo
 vim-scripts TaskList.vim
 vim-scripts ZenCoding.vim
-chrisbra NrrwRgn

@@ -29,3 +29,14 @@ set esckeys!
 
 " make sure ctrl p ignores build folder in middleman
 let g:ctrlp_custom_ignore = 'build/*'
+
+" unite.vim bindings
+" file search
+nnoremap <C-p> :Unite file_rec/async<cr>
+" content search
+nnoremap <space>/ :Unite grep:.<cr>
+" yank history
+let g:unite_source_history_yank_enable = 1
+nnoremap <space>y :Unite history/yank<cr>
+" buffer switch
+nnoremap <space>s :Unite -quick-match -auto-preview buffer<cr>
