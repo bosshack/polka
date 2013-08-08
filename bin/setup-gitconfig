@@ -41,6 +41,7 @@ global_config "alias.co"    "checkout"
 global_config "alias.aa"    "add --all"
 global_config "alias.au"    "add --update"
 global_config "alias.fa"    "fetch --all"
+global_config "alias.fap"   "fetch --all --prune"
 global_config "alias.ff"    "merge --ff-only"
 global_config "alias.b"     "branch"
 
