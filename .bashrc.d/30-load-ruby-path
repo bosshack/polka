@@ -1,6 +1,10 @@
 # vim: set ft=sh sw=2 ts=2 expandtab:
 
-if [[ -d "${HOME}/.rbenv" ]]; then
+if [[ -d "${HOME}/.rubies" ]]; then
+  # CHRUBY
+  source "$(brew --prefix chruby)/share/chruby/chruby.sh"
+  source "$(brew --prefix chruby)/share/chruby/auto.sh"
+elif [[ -d "${HOME}/.rbenv" ]]; then
   # RBENV
   prepend_path "${HOME}/.rbenv/shims" "${HOME}/.rbenv/bin"
   eval "$(rbenv init -)"
