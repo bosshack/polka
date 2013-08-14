@@ -65,12 +65,23 @@ global_config "alias.pum"   "push upstream master"
 #   l = all commits, only current branch
 #   la = all commits, all reachable refs
 
-global_config "alias.head"  "!git l -1"
-global_config "alias.h"     "!git head"
-global_config "alias.hp"    "!. ${HOME}/lib/githelpers && show_git_head"
-global_config "alias.r"     "!git l -30"
-global_config "alias.ra"    "!git r --all"
-global_config "alias.l"     "!. ${HOME}/lib/githelpers && pretty_git_log"
-global_config "alias.la"    "!git l --all"
+HASH="%C(auto,yellow)%h%C(auto,reset)"
+RELATIVE_TIME="%C(auto,green)(%ar)%C(auto,reset)"
+AUTHOR="%C(auto,bold blue)<%an>%C(auto,reset)"
+REFS="%C(auto,red)%d%C(auto,reset)"
+SUBJECT="%s"
+
+FORMAT="$HASH $RELATIVE_TIME $AUTHOR $REFS $SUBJECT"
+PRETTY="--pretty='tformat:${FORMAT}'"
+
+global_config "alias.h"     "log ${PRETTY} -1"
+global_config "alias.head"  "log ${PRETTY} -1"
+global_config "alias.hp"    "show --patch ${PRETTY}"
+
+global_config "alias.l"     "log --graph ${PRETTY}"
+global_config "alias.la"    "log --graph --all ${PRETTY}"
+
+global_config "alias.r"     "log --graph ${PRETTY} -30"
+global_config "alias.ra"    "log --graph --all ${PRETTY} -30"
 
 exit 0
