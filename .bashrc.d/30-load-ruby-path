@@ -14,7 +14,7 @@ elif [[ -d "${HOME}/.rvm" ]]; then
   [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
 fi
 
-chruby 1.9
+chruby 2.0
 
 # le bin stubs
 prepend_path "./bin"
