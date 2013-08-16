@@ -3,7 +3,6 @@
 if [[ -d "${HOME}/.rubies" ]]; then
   # CHRUBY
   source "$(brew --prefix chruby)/share/chruby/chruby.sh"
-  source "$(brew --prefix chruby)/share/chruby/auto.sh"
 elif [[ -d "${HOME}/.rbenv" ]]; then
   # RBENV
   prepend_path "${HOME}/.rbenv/shims" "${HOME}/.rbenv/bin"
