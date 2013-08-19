@@ -81,7 +81,7 @@ global_config "alias.hp"    "show --patch ${PRETTY}"
 global_config "alias.l"     "log --graph ${PRETTY}"
 global_config "alias.la"    "log --graph --all ${PRETTY}"
 
-global_config "alias.r"     "log --graph ${PRETTY} -30"
-global_config "alias.ra"    "log --graph --all ${PRETTY} -30"
+global_config "alias.r"     "log --graph ${PRETTY} -20"
+global_config "alias.ra"    "log --graph --all ${PRETTY} -20"
 
 exit 0
