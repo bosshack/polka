@@ -1,7 +1,7 @@
 Lokaltog vim-easymotion
 Shougo unite.vim
+Shougo vimproc.vim
 Shougo vimshell.vim
-Shougo/vimproc.vim
 SirVer ultisnips
 airblade vim-gitgutter
 chrisbra NrrwRgn
@@ -13,6 +13,7 @@ gregsexton MatchTag
 marijnh tern_for_vim
 mattn gist-vim
 mattn webapi-vim
+maxbrunsfeld vim-yankstack
 nelstrom vim-qargs
 ricardovaleriano vim-github-theme
 scrooloose syntastic
