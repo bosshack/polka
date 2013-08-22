@@ -1,7 +1,6 @@
 chriskempson base16-vim
 duff vim-scratch
 kchmck vim-coffee-script
-kien ctrlp.vim
 bling vim-airline
 mileszs ack.vim
 pangloss vim-javascript

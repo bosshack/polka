@@ -13,6 +13,7 @@ gregsexton MatchTag
 marijnh tern_for_vim
 mattn gist-vim
 mattn webapi-vim
+mattn emmet-vim
 maxbrunsfeld vim-yankstack
 nelstrom vim-qargs
 ricardovaleriano vim-github-theme
