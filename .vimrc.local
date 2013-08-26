@@ -16,6 +16,9 @@ hi! clear Search
 hi! IncSearch term=undercurl cterm=undercurl gui=undercurl
 hi! Search term=undercurl cterm=undercurl gui=undercurl
 
+" Run Ruby test
+nnoremap <localleader>t :wa\|!ruby -Itest %<cr>
+
 "=============================================
 " Promote Variable to Rspec Let
 "=============================================
