@@ -18,6 +18,7 @@ hi! Search term=undercurl cterm=undercurl gui=undercurl
 
 " Run Ruby test
 nnoremap <localleader>t :wa\|!ruby -Itest %<cr>
+nnoremap <localleader>f :let @*= @% . "." . line(".")<cr>
 
 "=============================================
 " Promote Variable to Rspec Let
