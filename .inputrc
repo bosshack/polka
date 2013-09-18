@@ -3,3 +3,8 @@
 set show-all-if-ambiguous on
 set completion-ignore-case on
 set completion-map-case on
+
+$if Bash
+  C-n: history-search-forward
+  C-p: history-search-backward
+$endif
