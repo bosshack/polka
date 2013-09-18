@@ -34,7 +34,7 @@ let g:ctrlp_custom_ignore = 'build/*'
 " file search
 nnoremap <C-p> :Unite -no-split file_rec/async<cr>
 " content search
-nnoremap <space>/ :Unite -auto-preview grep:.<cr>
+nnoremap <space>/ :Unite -auto-preview vcs_grep:.<cr>
 " yank history
 let g:unite_source_history_yank_enable = 1
 nnoremap <space>y :Unite history/yank<cr>
