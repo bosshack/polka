@@ -21,7 +21,6 @@ ricardovaleriano vim-github-theme
 scrooloose syntastic
 slim-template vim-slim
 spencertipping js-vim-highlighter
-terryma vim-multiple-cursors
 tpope vim-abolish
 tpope vim-eunuch
 tpope vim-speeddating
