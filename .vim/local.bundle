@@ -10,10 +10,11 @@ davidoc taskpaper.vim
 dcpu16 dcpu16-vim-syntax
 golangtw gocode.vim
 gregsexton MatchTag
+hail2u vim-css3-syntax
 marijnh tern_for_vim
+mattn emmet-vim
 mattn gist-vim
 mattn webapi-vim
-mattn emmet-vim
 maxbrunsfeld vim-yankstack
 nelstrom vim-qargs
 ricardovaleriano vim-github-theme
@@ -28,3 +29,4 @@ uggedal go-vim
 vim-scripts Gundo
 vim-scripts TaskList.vim
 vim-scripts ZenCoding.vim
+vim-scripts php.vim
