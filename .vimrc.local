@@ -51,3 +51,6 @@ endw
 
 " use gundo.vim
 nnoremap <F3> :GundoToggle<CR>
+
+" prevent syntastic from checking html constantly
+let syntastic_mode_map = { 'passive_filetypes': ['html'] }
