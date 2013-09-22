@@ -22,7 +22,6 @@ ricardovaleriano vim-github-theme
 scrooloose syntastic
 sgur unite-git_grep
 slim-template vim-slim
-spencertipping js-vim-highlighter
 tpope vim-abolish
 tpope vim-eunuch
 tpope vim-speeddating
