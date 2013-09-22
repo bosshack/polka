@@ -5,6 +5,7 @@ bling vim-airline
 mileszs ack.vim
 tpope vim-bundler
 tpope vim-commentary
+jelera vim-javascript-syntax
 tpope vim-cucumber
 tpope vim-endwise
 tpope vim-fugitive
