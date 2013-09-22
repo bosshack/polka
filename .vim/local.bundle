@@ -26,7 +26,6 @@ tpope vim-eunuch
 tpope vim-speeddating
 uggedal go-vim
 vim-scripts Gundo
-vim-scripts JavaScript-Indent
 vim-scripts TaskList.vim
 vim-scripts ZenCoding.vim
 vim-scripts php.vim
