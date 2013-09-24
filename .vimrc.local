@@ -1,3 +1,12 @@
+" Setup go
+set runtimepath+=$GOROOT/misc/vim
+
+" Visible whitespace
+set listchars=tab:\ \ ,trail:·
+
+" Hud
+set colorcolumn=80
+
 "=============================================
 " Color Scheme Overrides
 "=============================================

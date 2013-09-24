@@ -15,9 +15,6 @@ if filereadable(expand('~/.vim/bundle/vim-pathogen/autoload/pathogen.vim'))
   execute pathogen#infect()
 endif
 
-" Setup go
-set runtimepath+=$GOROOT/misc/vim
-
 " Start .vimrc
 set nocompatible
 filetype plugin indent on
@@ -65,10 +62,9 @@ set number
 set cursorline
 set laststatus=2 " Always show status bar
 set nowrap
-set colorcolumn=80
 
 " Visible whitespace
-set listchars=tab:\ \ ,trail:·
+set listchars=tab:»·,trail:·
 set list
 
 " Buffers
