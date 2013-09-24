@@ -4,7 +4,7 @@ kchmck vim-coffee-script
 kien ctrlp.vim
 bling vim-airline
 mileszs ack.vim
-pangloss vim-javascript
+jelera vim-javascript-syntax
 tpope vim-cucumber
 tpope vim-endwise
 tpope vim-fugitive
