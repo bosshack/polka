@@ -1,0 +1,3 @@
+# vim: set ft=sh sw=2 ts=2 expandtab:
+
+alias merge-latest='git fetch --all --tags; git merge $(git tag | gsort -V | tail -1)'
