@@ -13,5 +13,3 @@ elif [[ -d "${HOME}/.rvm" ]]; then
   [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
 fi
 
-# le bin stubs
-prepend_path "./bin"
