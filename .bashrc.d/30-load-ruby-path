@@ -5,7 +5,7 @@ if [[ -d "${HOME}/.rubies" ]]; then
   source "$(brew --prefix chruby)/share/chruby/chruby.sh"
 elif [[ -d "${HOME}/.rbenv" ]]; then
   # RBENV
-  prepend_path "${HOME}/.rbenv/shims" "${HOME}/.rbenv/bin"
+  # prepend_path "${HOME}/.rbenv/shims" "${HOME}/.rbenv/bin"
   eval "$(rbenv init -)"
 elif [[ -d "${HOME}/.rvm" ]]; then
   # RVM
