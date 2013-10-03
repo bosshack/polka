@@ -37,6 +37,7 @@ Polka *will* nuke your current dotfiles, so first make sure to back up any macro
 
 * [Vim](http://blog.jerodsanto.net/2011/08/brew-install-vim/)
 * [Bash 4.*](http://od-eon.com/blogs/stefan/upgrading-bash-os-x/)
+* Updating [Bash](http://stackoverflow.com/a/11704224) with Homebrew
 * [Pathogen](https://github.com/tpope/vim-pathogen)
 
 ## TODO (if you want to contribute)
