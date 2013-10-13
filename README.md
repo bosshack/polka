@@ -36,9 +36,14 @@ Polka *will* nuke your current dotfiles, so first make sure to back up any macro
 ## Setup Guides
 
 * [Vim](http://blog.jerodsanto.net/2011/08/brew-install-vim/)
-* [Bash 4.*](http://od-eon.com/blogs/stefan/upgrading-bash-os-x/)
+* [Bash 4.*](http://stackoverflow.com/a/11704224)
 * [Pathogen](https://github.com/tpope/vim-pathogen)
 
-## TODO (if you want to contribute)
-* I'd really like to see a fork without all the mac specific features, for all *nix users.
-* More detailed (read professional) documentation on the bash rebuild magic.
+## TODO
+* Start versioning polka.
+* Add comment to the top of every file to identify what version of polka it orginates from.
+* Add uninstall script that safely removes polka.
+* Package polka into a subdirectory named `.polka` in your home directory.
+* Document how to setup external dependencies.
+* Remove links to external resources.
+* Add update script.
