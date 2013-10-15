@@ -1,4 +1,5 @@
 #!/bin/bash
+# -polka-
 
 # Get the current directory
 DIR="$( cd "$(dirname "$0" )" && pwd )"
