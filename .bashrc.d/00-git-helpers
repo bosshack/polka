@@ -1,4 +1,5 @@
 # vim: set ft=sh sw=2 ts=2 expandtab:
+# -polka-
 
 # git_prompt_info accepts 0 or 1 arguments (i.e., format string)
 # returns text to add to bash PS1 prompt (includes branch name)

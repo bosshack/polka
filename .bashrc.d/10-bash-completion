@@ -1,4 +1,5 @@
 # vim: set ft=sh sw=2 ts=2 expandtab:
+# -polka-
 
 # Homebrew bash completion
 if [[ $(uname) == 'Darwin' && -f $(brew --prefix)/etc/bash_completion ]]; then

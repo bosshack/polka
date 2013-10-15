@@ -1,3 +1,5 @@
 # vim:set ft=sh sw=2 ts=2 expandtab:
+# -polka-
+
 ACK_PAGER="less -FXR"
 export ACK_PAGER

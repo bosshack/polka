@@ -1,4 +1,5 @@
 #!/bin/bash
+# -polka-
 # vim: set ft=sh sw=2 ts=2 expandtab:
 
 set -e
