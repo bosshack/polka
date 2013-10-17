@@ -1,3 +1,5 @@
+# -polka-
+
 run_scripts()
 {
     for script in $1/*; do
