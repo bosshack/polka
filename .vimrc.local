@@ -63,3 +63,6 @@ nnoremap <F3> :GundoToggle<CR>
 
 " prevent syntastic from checking html constantly
 let syntastic_mode_map = { 'passive_filetypes': ['html'] }
+
+" use mustache for .hbs files
+au BufRead,BufNewFile *.hbs set filetype=mustache

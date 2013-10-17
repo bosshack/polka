@@ -12,6 +12,7 @@ golangtw gocode.vim
 gregsexton MatchTag
 hail2u vim-css3-syntax
 jelera vim-javascript-syntax
+juvenn mustache.vim
 marijnh tern_for_vim
 mattn emmet-vim
 mattn gist-vim
