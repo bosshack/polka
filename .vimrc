@@ -13,7 +13,14 @@ endif
 
 " Start .vimrc
 set nocompatible
-filetype plugin indent on
+filetype off
+
+" load vundle
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
 
 "=============================================
 " Options
