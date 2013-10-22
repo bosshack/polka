@@ -12,36 +12,41 @@ if filereadable(expand('~/.vimrc.plugin_settings'))
 endif
 
 " Start .vimrc
-set nocompatible
-filetype off
+if has('vim_starting')
+ set nocompatible               " Be iMproved
+ set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
 
-" load vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" Load neobundle
+call neobundle#rc(expand('~/.vim/bundle/'))
 
-Bundle 'gmarik/vundle'
+NeoBundleFetch 'Shougo/neobundle.vim'
 
-Bundle 'chriskempson/base16-vim'
-Bundle 'duff/vim-scratch'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'bling/vim-airline'
-Bundle 'mileszs/ack.vim'
-Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-commentary'
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-git'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-pathogen'
-Bundle 'tpope/vim-ragtag'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-surround'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'vim-scripts/matchit.zip'
+NeoBundle 'chriskempson/base16-vim'
+NeoBundle 'duff/vim-scratch'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'mileszs/ack.vim'
+NeoBundle 'tpope/vim-bundler'
+NeoBundle 'tpope/vim-commentary'
+NeoBundle 'jelera/vim-javascript-syntax'
+NeoBundle 'tpope/vim-cucumber'
+NeoBundle 'tpope/vim-endwise'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-git'
+NeoBundle 'tpope/vim-haml'
+NeoBundle 'tpope/vim-markdown'
+NeoBundle 'tpope/vim-pathogen'
+NeoBundle 'tpope/vim-ragtag'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'tpope/vim-repeat'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'vim-scripts/matchit.zip'
+
+filetype plugin indent on
+
+NeoBundleCheck
 
 "=============================================
 " Options
