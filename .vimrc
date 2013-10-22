@@ -11,12 +11,6 @@ if filereadable(expand('~/.vimrc.plugin_settings'))
   source ~/.vimrc.plugin_settings
 endif
 
-" Load pathogen if it is found
-if filereadable(expand('~/.vim/bundle/vim-pathogen/autoload/pathogen.vim'))
-  source ~/.vim/bundle/vim-pathogen/autoload/pathogen.vim
-  execute pathogen#infect()
-endif
-
 " Start .vimrc
 set nocompatible
 filetype plugin indent on
