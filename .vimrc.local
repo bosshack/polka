@@ -41,6 +41,11 @@ let g:UltiSnipsSnippetsDir="~/.vim/bundles/UltiSnips/UltiSnips/"
 
 colorscheme base16-default
 set background=dark
+
+" some customizations
+highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+set nocursorline
+
 let g:airline_powerline_fonts=1
 let g:airline_theme='zenburn'
 let g:bufferline_echo = 0
