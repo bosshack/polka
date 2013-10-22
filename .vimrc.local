@@ -43,7 +43,7 @@ colorscheme base16-default
 set background=dark
 
 " some customizations
-highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+highlight LineNr term=bold cterm=NONE ctermfg=11 ctermbg=NONE gui=NONE guifg=11 guibg=NONE
 set nocursorline
 
 let g:airline_powerline_fonts=1
