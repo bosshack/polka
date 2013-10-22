@@ -21,6 +21,27 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
+Bundle 'chriskempson/base16-vim'
+Bundle 'duff/vim-scratch'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'bling/vim-airline'
+Bundle 'mileszs/ack.vim'
+Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-commentary'
+Bundle 'jelera/vim-javascript-syntax'
+Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-git'
+Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-pathogen'
+Bundle 'tpope/vim-ragtag'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-surround'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'vim-scripts/matchit.zip'
 
 "=============================================
 " Options
