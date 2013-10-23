@@ -36,6 +36,8 @@ NeoBundle "vim-scripts/TaskList.vim"
 NeoBundle "vim-scripts/ZenCoding.vim"
 NeoBundle "vim-scripts/php.vim"
 NeoBundle "evantravers/airline-minimo"
+NeoBundle 'rizzatti/funcoo.vim'
+NeoBundle 'rizzatti/dash.vim'
 
 set list listchars=tab:\ \ ,trail:·
 let g:UltiSnipsSnippetsDir="~/.vim/bundles/UltiSnips/UltiSnips/"
