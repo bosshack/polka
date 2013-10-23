@@ -1,23 +1,16 @@
 " -polka-
 
-scriptencoding utf-8
-
-"=============================================
-" Initialization
-"=============================================
-
-" Load user settings
-if filereadable(expand('~/.vimrc.plugin_settings'))
-  source ~/.vimrc.plugin_settings
-endif
-
-" Start .vimrc
-
 " Start .vimrc
 if has('vim_starting')
   set nocompatible
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
+
+scriptencoding utf-8
+
+"=============================================
+" Initialization
+"=============================================
 
 " Load neobundle
 call neobundle#rc(expand('~/.vim/bundle/'))
@@ -48,6 +41,11 @@ filetype plugin indent on
 
 " Check for missing packages
 NeoBundleCheck
+
+" Load user settings
+if filereadable(expand('~/.vimrc.plugin_settings'))
+  source ~/.vimrc.plugin_settings
+endif
 
 "=============================================
 " Options
