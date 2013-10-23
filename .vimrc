@@ -11,15 +11,43 @@ if filereadable(expand('~/.vimrc.plugin_settings'))
   source ~/.vimrc.plugin_settings
 endif
 
-" Load pathogen if it is found
-if filereadable(expand('~/.vim/bundle/vim-pathogen/autoload/pathogen.vim'))
-  source ~/.vim/bundle/vim-pathogen/autoload/pathogen.vim
-  execute pathogen#infect()
-endif
+" Start .vimrc
 
 " Start .vimrc
-set nocompatible
+if has('vim_starting')
+  set nocompatible
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+" Load neobundle
+call neobundle#rc(expand('~/.vim/bundle/'))
+
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+NeoBundle 'chriskempson/base16-vim'
+NeoBundle 'duff/vim-scratch'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'mileszs/ack.vim'
+NeoBundle 'jelera/vim-javascript-syntax'
+NeoBundle 'tpope/vim-cucumber'
+NeoBundle 'tpope/vim-endwise'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-git'
+NeoBundle 'tpope/vim-haml'
+NeoBundle 'tpope/vim-markdown'
+NeoBundle 'tpope/vim-ragtag'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'tpope/vim-repeat'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'vim-scripts/matchit.zip'
+
 filetype plugin indent on
+
+" Check for missing packages
+NeoBundleCheck
 
 "=============================================
 " Options
