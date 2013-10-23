@@ -46,6 +46,8 @@ set background=dark
 " some customizations
 hi LineNr term=bold cterm=NONE ctermfg=11 ctermbg=NONE gui=NONE guifg=11 guibg=NONE
 hi VertSplit term=bold cterm=NONE ctermfg=0 ctermbg=0 gui=NONE guifg=0 guibg=0
+hi NonText term=bold cterm=NONE ctermfg=11 ctermbg=NONE gui=NONE guifg=11 guibg=NONE
+hi VertSplit term=bold cterm=NONE ctermfg=0 ctermbg=0 gui=NONE guifg=0 guibg=0
 set fillchars=vert:\│
 set nocursorline
 
