@@ -37,16 +37,6 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'vim-scripts/matchit.zip'
 
-filetype plugin indent on
-
-" Check for missing packages
-NeoBundleCheck
-
-" Load user settings
-if filereadable(expand('~/.vimrc.plugin_settings'))
-  source ~/.vimrc.plugin_settings
-endif
-
 "=============================================
 " Options
 "=============================================
@@ -157,3 +147,9 @@ if filereadable(expand('~/.vimrc.local'))
   source ~/.vimrc.local
 endif
 
+" Load plugins now
+
+filetype plugin indent on
+
+" Check for missing packages
+NeoBundleCheck
