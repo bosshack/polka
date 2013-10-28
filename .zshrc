@@ -73,8 +73,7 @@ git_prompt_info () {
 }
 
 # set yo rubies son
-source /usr/local/share/chruby/chruby.sh
-chruby 2.0
+echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 
 # use fasd
 eval "$(fasd --init posix-alias zsh-hook zsh-ccomp)"
