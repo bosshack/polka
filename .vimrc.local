@@ -12,8 +12,6 @@ NeoBundle 'Shougo/vimproc', {
       \ }
 NeoBundle "SirVer/ultisnips"
 NeoBundle "airblade/vim-gitgutter"
-NeoBundle "chrisbra/NrrwRgn"
-NeoBundle "dcpu16/dcpu16-vim-syntax"
 NeoBundle "editorconfig/editorconfig-vim"
 NeoBundle "golangtw/gocode.vim"
 NeoBundle "gregsexton/MatchTag"
@@ -23,7 +21,6 @@ NeoBundle "marijnh/tern_for_vim"
 NeoBundle "mattn/emmet-vim"
 NeoBundle "mattn/gist-vim"
 NeoBundle "mattn/webapi-vim"
-NeoBundle "nelstrom/vim-qargs"
 NeoBundle "scrooloose/syntastic"
 NeoBundle "sgur/unite-git_grep"
 NeoBundle "slim-template/vim-slim"
@@ -32,8 +29,6 @@ NeoBundle "tpope/vim-eunuch"
 NeoBundle "tpope/vim-speeddating"
 NeoBundle "uggedal/go-vim"
 NeoBundle "vim-scripts/Gundo"
-NeoBundle "vim-scripts/TaskList.vim"
-NeoBundle "vim-scripts/ZenCoding.vim"
 NeoBundle "vim-scripts/php.vim"
 NeoBundle "evantravers/airline-minimo"
 NeoBundle 'rizzatti/funcoo.vim'
@@ -71,17 +66,10 @@ let &showbreak='↪ '
 
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
-au FileType javascript setl conceallevel=2 concealcursor=nc
-let g:syntax_js=['function', 'return', 'solarized', 'this', 'proto']
-
 " make escape work sensibly
 set esckeys!
 
-" make sure ctrl p ignores build folder in middleman
-let g:ctrlp_custom_ignore = 'build/*'
-
 " unite.vim bindings
-
 if executable('ag')
   let g:unite_source_grep_command = 'ag'
   let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
@@ -119,8 +107,7 @@ endw
 " use gundo.vim
 nnoremap <F3> :GundoToggle<CR>
 
+nnoremap <F1> :Dash<CR>
+
 " prevent syntastic from checking html constantly
 let syntastic_mode_map = { 'passive_filetypes': ['html'] }
-
-" use mustache for .hbs files
-au BufRead,BufNewFile *.hbs set filetype=mustache
