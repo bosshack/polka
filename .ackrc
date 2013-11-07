@@ -1,15 +1,7 @@
 # -polka-
 
---type-set=cucumber=.feature
---type-add=html=.haml,.erb
---type-add=ruby=.haml
---type-add=css=.scss,.sass
---type-add=js=.coffee
-
---ignore-dir=tmp
---ignore-dir=coverage
---ignore-dir=doc
---ignore-dir=vendor
---ignore-dir=stories
---ignore-dir=public/system
---ignore-dir=public/uploads
+--type-set=cucumber:ext:feature,feature_off
+--type-add=html:ext:haml,erb
+--type-add=ruby:ext:haml
+--type-add=css:ext:scss,sass
+--type-add=js:ext:coffee
