@@ -1,3 +1,5 @@
+filetype off
+
 " vundle
 NeoBundle "Lokaltog/vim-easymotion"
 NeoBundle "Shougo/unite.vim"
@@ -33,6 +35,8 @@ NeoBundle "vim-scripts/php.vim"
 NeoBundle "evantravers/airline-minimo"
 NeoBundle 'rizzatti/funcoo.vim'
 NeoBundle 'rizzatti/dash.vim'
+
+filetype plugin indent on
 
 set list listchars=tab:\ \ ,trail:·
 let g:UltiSnipsSnippetsDir="~/.vim/bundles/UltiSnips/UltiSnips/"
