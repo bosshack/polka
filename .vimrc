@@ -19,23 +19,18 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'chriskempson/base16-vim'
 NeoBundle 'duff/vim-scratch'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'bling/vim-airline'
 NeoBundle 'mileszs/ack.vim'
-NeoBundle 'jelera/vim-javascript-syntax'
-NeoBundle 'tpope/vim-cucumber'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-git'
-NeoBundle 'tpope/vim-haml'
-NeoBundle 'tpope/vim-markdown'
 NeoBundle 'tpope/vim-ragtag'
-NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
-NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'vim-scripts/matchit.zip'
+
+" Load plugins now
+
+filetype plugin indent on
 
 "=============================================
 " Options
@@ -146,10 +141,6 @@ nnoremap <localleader>ws m`:%s/\s\+$//e<CR>``
 if filereadable(expand('~/.vimrc.local'))
   source ~/.vimrc.local
 endif
-
-" Load plugins now
-
-filetype plugin indent on
 
 " Check for missing packages
 NeoBundleCheck
