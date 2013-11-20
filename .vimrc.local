@@ -115,3 +115,5 @@ nnoremap <F1> :Dash<CR>
 
 " prevent syntastic from checking html constantly
 let syntastic_mode_map = { 'passive_filetypes': ['html'] }
+
+set colorcolumn=80
