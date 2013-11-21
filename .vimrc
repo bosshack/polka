@@ -133,14 +133,5 @@ nnoremap <localleader>/ :nohlsearch<CR>
 " Trim trailing whitespace
 nnoremap <localleader>ws m`:%s/\s\+$//e<CR>``
 
-"=============================================
-" Additional Config Files
-"=============================================
-
-" Load user settings
-if filereadable(expand('~/.vimrc.local'))
-  source ~/.vimrc.local
-endif
-
 " Check for missing packages
 NeoBundleCheck

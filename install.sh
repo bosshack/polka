@@ -49,20 +49,3 @@ find -L "${HOME}" "${HOME}/.bashrc.d" "${HOME}/bin" "${HOME}/lib" -maxdepth 1 -t
 
 # execute scripts on install
 (exec "${DIR}/bin/setup-gitconfig")
-
-# ask the user if they want the preset or "hacker" version
-
-if [[ ! -s "${HOME}/.vimrc.local" ]]; then
-  read -n1 -p "Would you like to set up our presets for vim and tmux? " answer
-  echo
-  if [[ "$answer" != "y" && "$answer" != "Y" ]]; then
-    echo "enjoy your sparse, hackernews approved setup!"
-    exit 0
-  fi
-
-  # move preset files to home
-  echo "wise choice."
-  for preset in $(find "presets" -maxdepth 1 -type f -name ".*"); do
-    cp $preset "${HOME}/$(basename $preset)"
-  done
-fi
