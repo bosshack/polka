@@ -32,6 +32,8 @@ global_config "color.status.untracked"  "red"
 
 global_config "core.excludesfile" "${HOME}/.cvsignore"
 
+global_config "rerere.enabled" "true"
+
 global_config "browser.gitscm.cmd" "/bin/sh -c 'open http://git-scm.com/docs/\$(basename \$1 .html)' --"
 global_config "help.browser" "gitscm"
 
