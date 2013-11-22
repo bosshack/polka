@@ -19,3 +19,4 @@ tpope vim-surround
 vim-ruby vim-ruby
 vim-scripts fish.vim
 vim-scripts matchit.zip
+jnwhiteh vim-golang
