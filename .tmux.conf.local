@@ -17,3 +17,4 @@ set -g window-status-current-format "#[fg=black,bg=yellow]#[fg=black,bg=yello
 set-option -g status-right '#(cat ~/.thyme-tmux)'
 
 bind-key S run-shell "tmux rename-session $(basename $(pwd))"
+setw -g aggressive-resize on
