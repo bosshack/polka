@@ -17,7 +17,6 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-NeoBundle 'chriskempson/base16-vim'
 NeoBundle 'duff/vim-scratch'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'tpope/vim-endwise'
@@ -41,8 +40,6 @@ set encoding=utf-8
 
 " Color
 set t_Co=256
-set background=dark
-colorscheme base16-default
 syntax on
 
 " Turn off error bells
