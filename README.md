@@ -1,6 +1,6 @@
 # Polka
 
-Development configuration for the fishbowl. This is a opinionated setup, strongly believing in linux, vim, and utilizes the [base16](https://github.com/chriskempson/base16) color scheme.
+Development configuration for setting up and tracking dotfiles in a development environment. This is a opinionated setup, strongly believing in linux, and vim.
 
 It's to be considered as a really quick setup script to help you manage your dotfiles easily. You can fork the repo, modify the setup, add your own dotfiles.
 
