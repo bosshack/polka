@@ -27,7 +27,7 @@ Polka *will* nuke your current dotfiles, so first make sure to back up any macro
 
 We recommend you have installed (through brew or whatever package manager you prefer) the following:
 
-* bash
+* bash >= 4.0
 * ack
 * git
 * bash-completion
