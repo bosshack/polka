@@ -42,7 +42,7 @@ done
 [ -d "${HOME}/.vim/undo" ]    || mkdir -p "${HOME}/.vim/undo"
 
 # Preload NeoBundle
-[ -d "${HOME}/.vim/bundle/neobundle.vim" ] || git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+[ -d "${HOME}/.vim/bundle/neobundle.vim" ] || git clone "git://github.com/Shougo/neobundle.vim" "${HOME}/.vim/bundle/neobundle.vim"
 
 # Remove broken symlinks
 find -L "${HOME}" "${HOME}/.bashrc.d" "${HOME}/bin" "${HOME}/lib" "${HOME}/.vim/" -maxdepth 1 -type l | xargs rm 2>/dev/null
