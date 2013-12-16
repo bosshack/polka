@@ -1,24 +1,36 @@
 " -polka-
 
+" Start .vimrc
+if has('vim_starting')
+  set nocompatible
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
 scriptencoding utf-8
 
 "=============================================
 " Initialization
 "=============================================
 
-" Load user settings
-if filereadable(expand('~/.vimrc.plugin_settings'))
-  source ~/.vimrc.plugin_settings
-endif
+" Load neobundle
+call neobundle#rc(expand('~/.vim/bundle/'))
 
-" Load pathogen if it is found
-if filereadable(expand('~/.vim/bundle/vim-pathogen/autoload/pathogen.vim'))
-  source ~/.vim/bundle/vim-pathogen/autoload/pathogen.vim
-  execute pathogen#infect()
-endif
+NeoBundleFetch 'Shougo/neobundle.vim'
 
-" Start .vimrc
-set nocompatible
+NeoBundle 'duff/vim-scratch'
+NeoBundle 'mileszs/ack.vim'
+NeoBundle 'tpope/vim-endwise'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-git'
+NeoBundle 'tpope/vim-ragtag'
+NeoBundle 'tpope/vim-repeat'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'vim-scripts/matchit.zip'
+
+" Check for missing packages
+NeoBundleCheck
+
+" Load plugins
 filetype plugin indent on
 
 "=============================================
@@ -30,8 +42,6 @@ set encoding=utf-8
 
 " Color
 set t_Co=256
-set background=dark
-colorscheme base16-default
 syntax on
 
 " Turn off error bells
@@ -120,13 +130,4 @@ nnoremap <localleader>/ :nohlsearch<CR>
 
 " Trim trailing whitespace
 nnoremap <localleader>ws m`:%s/\s\+$//e<CR>``
-
-"=============================================
-" Additional Config Files
-"=============================================
-
-" Load user settings
-if filereadable(expand('~/.vimrc.local'))
-  source ~/.vimrc.local
-endif
 
