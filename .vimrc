@@ -30,7 +30,7 @@ NeoBundle 'vim-scripts/matchit.zip'
 " Check for missing packages
 NeoBundleCheck
 
-" Load plugins now
+" Load plugins
 filetype plugin indent on
 
 "=============================================
