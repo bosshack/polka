@@ -27,8 +27,10 @@ NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-scripts/matchit.zip'
 
-" Load plugins now
+" Check for missing packages
+NeoBundleCheck
 
+" Load plugins now
 filetype plugin indent on
 
 "=============================================
@@ -129,5 +131,3 @@ nnoremap <localleader>/ :nohlsearch<CR>
 " Trim trailing whitespace
 nnoremap <localleader>ws m`:%s/\s\+$//e<CR>``
 
-" Check for missing packages
-NeoBundleCheck
