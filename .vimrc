@@ -88,8 +88,8 @@ set nowrap
 set colorcolumn=80
 
 " Visible whitespace
-set listchars=tab:»·,trail:·
-set list
+" set listchars=tab:»·,trail:·
+" set list
 
 " Buffers
 set hidden
