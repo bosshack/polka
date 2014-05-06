@@ -3,5 +3,5 @@
 if [ -x "/usr/local/bin/go" ]; then
   export GOPATH="${HOME}/go"
   export GOROOT="$(go env GOROOT)"
-  append_path "${GOPATH}/bin"
+  append_path "${GOROOT}/bin" "${GOPATH}/bin"
 fi
