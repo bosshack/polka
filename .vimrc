@@ -36,6 +36,7 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'vim-scripts/matchit.zip'
 NeoBundle 'fatih/vim-go'
+NeoBundle 'jneen/ragel.vim'
 
 " Check for missing packages
 NeoBundleCheck
