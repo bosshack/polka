@@ -20,7 +20,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'YorickPeterse/happy_hacking.vim'
 NeoBundle 'duff/vim-scratch'
 NeoBundle 'jelera/vim-javascript-syntax'
-NeoBundle 'jnwhiteh/vim-golang'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'tpope/vim-cucumber'
@@ -36,6 +35,7 @@ NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'vim-scripts/matchit.zip'
+NeoBundle 'fatih/vim-go'
 
 " Check for missing packages
 NeoBundleCheck
