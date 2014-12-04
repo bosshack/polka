@@ -13,7 +13,7 @@ scriptencoding utf-8
 "=============================================
 
 " Load neobundle
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
@@ -39,6 +39,8 @@ NeoBundle 'jneen/ragel.vim'
 
 " Check for missing packages
 NeoBundleCheck
+
+call neobundle#end()
 
 " Load plugins
 filetype plugin indent on
