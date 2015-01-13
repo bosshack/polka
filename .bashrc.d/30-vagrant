@@ -1,3 +1,0 @@
-# vim: set ft=sh sw=2 ts=2 expandtab:
-
-export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
