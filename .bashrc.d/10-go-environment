@@ -1,7 +1,4 @@
 # vim:set ft=sh sw=2 ts=2 expandtab:
 
-if [ -x "/usr/local/bin/go" ]; then
-  export GOPATH="${HOME}/go"
-  export GOROOT="$(go env GOROOT)"
-  append_path "${GOROOT}/bin" "${GOPATH}/bin"
-fi
+export GOPATH="${HOME}/go"
+append_path "${GOPATH}/bin"
