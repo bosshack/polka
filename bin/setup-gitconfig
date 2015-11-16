@@ -45,20 +45,22 @@ global_config "alias.aa"    "add --all"
 global_config "alias.au"    "add --update"
 global_config "alias.fa"    "fetch --all"
 global_config "alias.fap"   "fetch --all --prune"
-global_config "alias.ff"    "merge --ff-only"
 global_config "alias.b"     "branch"
+global_config "alias.ff"    "merge --ff-only"
+global_config "alias.ms"    "merge --no-commit --log --no-ff"
+global_config "alias.mc"    "merge --log --no-ff"
+global_config "alias.rc"    "rebase --continue"
 
 global_config "alias.ci"    "commit -v"
 global_config "alias.amend" "commit -v --amend"
 
+global_config "alias.ignored"     "!git ls-files -v | grep '^[[:lower:]]' | cut -c 3-"
+global_config "alias.ignore"      "update-index --assume-unchanged"
+global_config "alias.acknowledge" "update-index --no-assume-unchanged"
+
 global_config "alias.di"    "diff"
 global_config "alias.dc"    "diff --cached"
 global_config "alias.dh1"   "diff HEAD~1"
-
-global_config "alias.po"    "push origin"
-global_config "alias.pom"   "push origin master"
-global_config "alias.pu"    "push upstream"
-global_config "alias.pum"   "push upstream master"
 
 # Fancy logging.
 #   h = head
@@ -86,5 +88,7 @@ global_config "alias.la"    "log --graph --all ${PRETTY}"
 
 global_config "alias.r"     "log --graph ${PRETTY} -20"
 global_config "alias.ra"    "log --graph --all ${PRETTY} -20"
+
+global_config "alias.lf"    "log --first-parent --oneline"
 
 exit 0
