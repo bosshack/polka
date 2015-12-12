@@ -1,0 +1,6 @@
+---
+- name: Install Packages
+  homebrew:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ homebrew_packages }}"

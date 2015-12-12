@@ -3,7 +3,9 @@
   hosts: localhost
   connection: local
   gather_facts: false
+  vars:
+    homebrew_packages:
+      - bash
+
   roles:
-    - test
-
-
+    - homebrew
