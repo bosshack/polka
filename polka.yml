@@ -1,0 +1,9 @@
+---
+- name: Setup Polka
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Test
+      shell: "echo 'Test Task'"
+
+
