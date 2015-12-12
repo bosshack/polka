@@ -3,8 +3,7 @@
   hosts: localhost
   connection: local
   gather_facts: false
-  tasks:
-    - name: Test
-      shell: "echo 'Test Task'"
+  roles:
+    - test
 
 
