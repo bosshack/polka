@@ -1,3 +1,0 @@
----
-- name: Test
-  shell: "echo 'Test Task'"
