@@ -5,7 +5,15 @@
   gather_facts: false
   vars:
     homebrew_packages:
+      - ack
       - bash
+      - coreutils
+      - ctags
+      - jq
+      - openssl
+      - readline
+      - tree
+      - watch
 
   roles:
     - homebrew
