@@ -1,0 +1,9 @@
+# vim: set ft=sh sw=2 ts=2 expandtab
+# -polka-
+
+export PERL_LOCAL_LIB_ROOT="/Users/tmiller/perl5:$PERL_LOCAL_LIB_ROOT"
+export PERL_MB_OPT="--install_base "/Users/tmiller/perl5""
+export PERL_MM_OPT="INSTALL_BASE=/Users/tmiller/perl5"
+export PERL5LIB="/Users/tmiller/perl5/lib/perl5:$PERL5LIB"
+
+prepend_path "/Users/tmiller/perl5/bin"

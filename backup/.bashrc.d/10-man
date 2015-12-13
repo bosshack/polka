@@ -1,0 +1,3 @@
+# vim: set ft=sh ts=2 sw=2 expandtab
+
+export MANPATH="${HOME}/share/man:${MANPATH}"

@@ -1,0 +1,4 @@
+# vim:set ft=sh sw=2 ts=2 expandtab:
+
+export GOPATH="${HOME}/go"
+append_path "${GOPATH}/bin"

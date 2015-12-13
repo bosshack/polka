@@ -4,10 +4,16 @@
 EDITOR="vim"
 CLICOLOR=1
 HISTSIZE=10000
-HISTCONTROL=erasedups
+HISTCONTROL=ignoredups:erasedups
+
+# After each command, save and reload history
+PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 # Better globbing in bash
 shopt -s globstar
+
+# Append history entries
+shopt -s histappend
 
 # Disable Ctrl-s suspend terminal
 stty -ixon
@@ -17,6 +23,7 @@ if [[ "$(uname)" == 'Darwin' ]]; then
   ulimit -n 4096
 
   # Setup path with homebrew
+  prepend_path "/usr/local/go/bin"
   prepend_path "$(brew --prefix)/bin" "$(brew --prefix)/sbin"
   append_path "$(brew --cellar)/python"
 fi
@@ -31,4 +38,4 @@ fi
 
 prepend_path "${HOME}/bin"
 
-export EDITOR CLICOLOR HISTSIZE HISTCONTROL
+export EDITOR CLICOLOR HISTSIZE HISTCONTROL PROMPT_COMMAND

@@ -1,0 +1,28 @@
+---
+- name: Install Bash
+  homebrew:
+    name: bash
+    state: latest
+  tags:
+    - brew
+
+- name: Create ~/.bashrc.d
+  file:
+    name: ~/.bashrc.d
+    state: directory
+
+- name: Install bash path helpers
+  copy:
+    src: 00-path-helpers
+    dest: ~/.bashrc.d/00-path-helpers
+    mode: "0755"
+
+- name: Install .bashrc
+  copy:
+    src: bashrc
+    dest: ~/.bashrc
+
+- name: Install .bash_profile
+  copy:
+    src: bash_profile
+    dest: ~/.bash_profile

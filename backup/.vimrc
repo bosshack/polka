@@ -17,14 +17,28 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+NeoBundle 'YorickPeterse/happy_hacking.vim'
 NeoBundle 'duff/vim-scratch'
+NeoBundle 'fatih/vim-go'
+NeoBundle 'godlygeek/tabular'
+NeoBundle 'jelera/vim-javascript-syntax'
+NeoBundle 'jneen/ragel.vim'
 NeoBundle 'mileszs/ack.vim'
+NeoBundle 'rodjek/vim-puppet'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'tpope/vim-cucumber'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-git'
+NeoBundle 'tpope/vim-haml'
+NeoBundle 'tpope/vim-markdown'
 NeoBundle 'tpope/vim-ragtag'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'vim-scripts/matchit.zip'
 
 " Check for missing packages
@@ -44,6 +58,8 @@ set encoding=utf-8
 
 " Color
 set t_Co=256
+set background=dark
+colorscheme happy_hacking
 syntax on
 
 " Turn off error bells
@@ -75,10 +91,11 @@ set ruler
 set number
 set laststatus=2 " Always show status bar
 set nowrap
+set colorcolumn=80
 
 " Visible whitespace
-set listchars=tab:»·,trail:·
-set list
+" set listchars=tab:»·,trail:·
+" set list
 
 " Buffers
 set hidden
@@ -133,3 +150,5 @@ nnoremap <localleader>/ :nohlsearch<CR>
 " Trim trailing whitespace
 nnoremap <localleader>ws m`:%s/\s\+$//e<CR>``
 
+" Run Ruby test
+nnoremap <localleader>t :wa\|!ruby -Itest %<cr>
