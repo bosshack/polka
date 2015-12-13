@@ -1,3 +1,0 @@
-# -polka-
-
-source "${HOME}/.bashrc"
