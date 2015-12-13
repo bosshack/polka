@@ -6,7 +6,6 @@
   vars:
     homebrew_packages:
       - ack
-      - bash
       - coreutils
       - ctags
       - jq

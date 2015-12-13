@@ -1,4 +1,9 @@
 ---
+- name: Install Bash
+  homebrew:
+    name: bash
+    state: latest
+
 - name: Create ~/.bashrc.d
   file:
     name: ~/.bashrc.d
