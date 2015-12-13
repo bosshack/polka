@@ -1,0 +1,16 @@
+---
+- name: Create ~/.bashrc.d
+  file:
+    name: ~/.bashrc.d
+    state: directory
+
+- name: Install bash path helpers
+  copy:
+    src: 00-path-helpers
+    dest: ~/.bashrc.d/00-path-helpers
+    mode: "0755"
+
+- name: Install .bashrc
+  copy:
+    src: bashrc
+    dest: ~/.bashrc

@@ -1,0 +1,34 @@
+# -polka-
+
+remove_from_path() {
+  case "$PATH" in
+    *:"$1":*) PATH="$(echo "$PATH"|sed -e "s#:${1}##g")"
+  esac
+  export PATH
+}
+
+prepend_path() {
+  local args arg dir
+
+  # reverse the order of the arguments to preserve the order passed in
+  for arg in $@; do
+    args="$arg $args"
+  done
+
+  for dir in $args; do
+    remove_from_path "$dir"
+    PATH="${dir}:${PATH}"
+  done
+  export PATH
+}
+
+append_path() {
+  local dir
+
+  for dir in $@; do
+    remove_from_path "$dir"
+    PATH="${PATH}:${dir}"
+  done
+  export PATH
+}
+
