@@ -14,3 +14,8 @@
   copy:
     src: bashrc
     dest: ~/.bashrc
+
+- name: Install .bash_profile
+  copy:
+    src: bash_profile
+    dest: ~/.bash_profile
