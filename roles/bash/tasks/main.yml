@@ -3,6 +3,8 @@
   homebrew:
     name: bash
     state: latest
+  tags:
+    - brew
 
 - name: Create ~/.bashrc.d
   file:
