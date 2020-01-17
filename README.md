@@ -1,4 +1,8 @@
-# Polka
+# ⛔️ Deprecated: Polka
+
+The maintainers of this project have moved on to other methods. Some are using [stow](https://www.gnu.org/software/stow/).
+
+---
 
 Development configuration for setting up and tracking dotfiles in a development environment. This is a opinionated setup, strongly believing in linux, and vim.
 
